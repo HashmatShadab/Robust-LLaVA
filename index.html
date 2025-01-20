@@ -52,37 +52,41 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Robust-LLaVA: On the Effectiveness of Large-Scale Robust Image Encoders for Multi-modal Large Language Models</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="Hashmat Shadab Malik" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="Hashmat Shadab Malik" target="_blank">Hashmat Shadab Malik</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="Fahad Shamshad" target="_blank">Second Author</a>,</span>
+                  <a href="Fahad Shamshad" target="_blank">Fahad Shamshad</a><sup>1</sup>,</span>
                   <span class="author-block">
-                    <a href="Muzammal Naseer" target="_blank">Third Author</a>
+                    <a href="Muzammal Naseer" target="_blank">Muzammal Naseer</a><sup>2</sup>,</span>
                   </span>
                   <span class="author-block">
-                    <a href="Karthik Nandakumar" target="_blank">Third Author</a>
+                    <a href="Karthik Nandakumar" target="_blank">Karthik Nandakumar</a><sup>1</sup>,</span>
                   </span>
                   <span class="author-block">
-                        <a href="Fahad Shahbaz Khan" target="_blank">Third Author</a>
+                        <a href="Fahad Shahbaz Khan" target="_blank">Fahad Shahbaz Khan</a><sup>1,3</sup>,</span>
                   </span>
                     <span class="author-block">
-                            <a href="Salman Khan" target="_blank">Third Author</a>
+                            <a href="Salman Khan" target="_blank">Salman Khan</a><sup>1,4</sup>
                     </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">MBZUAI<br>Under Review</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+                    <span class="author-block"><sup>1</sup>Mohamed bin Zayed University of Artificial Intelligence, UAE<br>
+                    <span class="author-block"><sup>2</sup>Center of Secure Cyber-Physical Security Systems, Khalifa University, UAE<br>
+                    <span class="author-block"><sup>3</sup>Linköping University <br>
+                      <span class="author-block"><sup>4</sup>Australian National University <br>Under Review</span>
 
+
+<!--                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>-->
+                  </div>
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2403.04701.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -93,7 +97,7 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="static/pdfs/sample.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -104,7 +108,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/HashmatShadab/Robust-LLaVA" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -115,7 +119,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2403.04701" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -157,7 +161,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Multi-modal Large Language Models (MLLMs) have demonstrated impressive capabilities in vision-language tasks, but their reliance on visual processing introduces critical security vulnerabilities. Their vision encoders remain susceptible to adversarial perturbations that can induce hallucinations, manipulate responses, or bypass safety mechanisms while maintaining coherent language generation. Current approaches attempt to address this by adversarially fine-tuning CLIP vision encoders on ImageNet-scale data, but exhibit inherent limitations in both robustness and generalization due to the restricted scale and diversity of adversarial training.
+In this work, we present an alternative approach by leveraging vision encoders adversarially pre-trained on billion-scale image-text pairs.
+Our analysis reveals two principal contributions:
+(1) the extensive scale and diversity of adversarial pre-training enables these encoders to demonstrate superior robustness against diverse adversarial threats, ranging from imperceptible perturbations to advanced jailbreaking attempts, and (2) end-to-end MLLM optimization with these robust encoders facilitates enhanced adaptation of language components to robust visual features, substantially outperforming existing plug-and-play methodologies on complex reasoning tasks.
+Through systematic evaluation across visual question-answering, image captioning, and jail-break attacks, we demonstrate that MLLMs trained with these robust encoders achieve superior adversarial robustness while maintaining favorable clean performance. Our framework achieves 2x and 1.5x average robustness gains in captioning and VQA tasks, respectively, and delivers over 10%  improvement against advanced jailbreaking attacks compared to state-of-the-art methods.
           </p>
         </div>
       </div>
@@ -168,36 +176,113 @@
 
 
 <!-- Image carousel -->
+    <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+  <h2 class="title is-3">Untargetted Attack on Image Captioning Task</h2>
+        </div>
+      </div>
+    </div>
+
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/IC_U_1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Untargetted Attack on Image Captioning Task
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/IC_U_2.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Untargetted Attack on Image Captioning Task
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/IC_U_3.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+          Untargetted Attack on Image Captioning Task
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <img src="static/images/IC_U_4.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+          Untargetted Attack on Image Captioning Task
+      </h2>
+    </div>
+        <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_U_5.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Image Captioning Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_U_6.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Image Captioning Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_U_7.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Image Captioning Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_U_8.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Image Captioning Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_U_9.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Image Captioning Task
+      </h2>
+    </div>
+      <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_U_10.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Image Captioning Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_U_11.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Image Captioning Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_U_12.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Image Captioning Task
+      </h2>
+    </div>
+        <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_U_13.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Image Captioning Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_U_14.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Image Captioning Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_U_15.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Image Captioning Task
       </h2>
     </div>
   </div>
@@ -207,6 +292,230 @@
 <!-- End image carousel -->
 
 
+<!-- Image carousel -->
+      <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+  <h2 class="title is-3">Targetted Attack on Image Captioning Task</h2>
+        </div>
+      </div>
+    </div>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/IC_T_1.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Targetted Attack on Image Captioning Task
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/IC_T_2.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Targetted Attack on Image Captioning Task
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/IC_T_3.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Targetted Attack on Image Captioning Task
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_T_4.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Targetted Attack on Image Captioning Task
+      </h2>
+    </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_T_5.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Targetted Attack on Image Captioning Task
+      </h2>
+    </div>
+             <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/IC_T_6.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Targetted Attack on Image Captioning Task
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Image carousel -->
+    <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+  <h2 class="title is-3">Untargetted Attack on Visual Question Answering(VQA) Task</h2>
+        </div>
+      </div>
+    </div>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/VQA_U_1.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Visual Question Answering(VQA) Task
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/VQA_U_2.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Visual Question Answering(VQA) Task
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/VQA_U_3.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Visual Question Answering(VQA) Task
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/VQA_U_4.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Visual Question Answering(VQA) Task
+      </h2>
+    </div>
+        <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/VQA_U_5.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Visual Question Answering(VQA) Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/VQA_U_6.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Visual Question Answering(VQA) Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/VQA_U_7.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Visual Question Answering(VQA) Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/VQA_U_8.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Visual Question Answering(VQA) Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/VQA_U_9.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Visual Question Answering(VQA) Task
+      </h2>
+    </div>
+      <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/VQA_U_10.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Untargetted Attack on Visual Question Answering(VQA) Task
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<!-- Image carousel -->
+    <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+  <h2 class="title is-3">Common Corruptions on Image Captioning Task</h2>
+        </div>
+      </div>
+    </div>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/CC_1.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Common Corruptions on Image Captioning Task
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/CC_2.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Common Corruptions on Image Captioning Task
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/CC_3.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Common Corruptions on Image Captioning Task
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/CC_4.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Common Corruptions on Image Captioning Task
+      </h2>
+    </div>
+        <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/CC_5.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Common Corruptions on Image Captioning Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/CC_6.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Common Corruptions on Image Captioning Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/CC_7.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Common Corruptions on Image Captioning Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/CC_8.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Common Corruptions on Image Captioning Task
+      </h2>
+    </div><div class="item">
+      <!-- Your image here -->
+      <img src="static/images/CC_9.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          Common Corruptions on Image Captioning Task
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
 
 
 <!-- Youtube video -->
