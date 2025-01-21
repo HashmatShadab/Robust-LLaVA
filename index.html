@@ -60,7 +60,8 @@
                         <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=2Ft7r4AAAAAJ&hl=en" target="_blank">Hashmat Shadab Malik</a><sup>1</sup>,</span>
                         <span class="author-block">
-                  <a href="https://scholar.google.com.pk/citations?hl=en&user=d7QL4wkAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Fahad Shamshad</a><sup>1</sup>,</span>
+                  <a href="https://scholar.google.com.pk/citations?hl=en&user=d7QL4wkAAAAJ&view_op=list_works&sortby=pubdate"
+                     target="_blank">Fahad Shamshad</a><sup>1</sup>,</span>
                         <span class="author-block">
                     <a href="https://scholar.google.com/citations?user=tM9xKA8AAAAJ&hl=en" target="_blank">Muzammal Naseer</a><sup>2</sup>,</span>
                         </span>
@@ -140,23 +141,85 @@
 </section>
 
 
-<!-- Teaser video-->
+<!--&lt;!&ndash; Teaser video&ndash;&gt;-->
+<!--<section class="hero teaser">-->
+<!--    <div class="container is-max-desktop">-->
+<!--        <div class="hero-body">-->
+<!--            <video autoplay controls height="100%" id="tree" loop muted poster="">-->
+<!--                &lt;!&ndash; Your video here &ndash;&gt;-->
+<!--                <source src="static/videos/banner_video.mp4"-->
+<!--                        type="video/mp4">-->
+<!--            </video>-->
+<!--            <h2 class="subtitle has-text-centered">-->
+<!--                Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at,-->
+<!--                placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.-->
+<!--            </h2>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End teaser video &ndash;&gt;-->
+
+
+
 <section class="hero teaser">
     <div class="container is-max-desktop">
         <div class="hero-body">
-            <video autoplay controls height="100%" id="tree" loop muted poster="">
-                <!-- Your video here -->
-                <source src="static/videos/banner_video.mp4"
-                        type="video/mp4">
-            </video>
-            <h2 class="subtitle has-text-centered">
-                Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at,
-                placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
+<img src="./static/images/Algorithm.png"><br>
+<img src="./static/images/clip_alignment_zs_app.png">            <h2 class="subtitle has-text-centered">
+                <p align="justify">
+                    Current multi-modal large language models (MLLMs) struggle to achieve <b>high adversarial robustness</b> while maintaining strong
+<b>vision-language reasoning</b>. Methods such as <b>TeCoA</b>, <b>FARE</b>, and <b>SimCLIP</b> perform constrained adversarial
+fine-tuning of CLIP to <i>preserve the generalization capabilities</i> of the pre-trained model.
+
+However, this limited adversarial training results in only <b>modest robustness gains</b> when the model is integrated into an
+MLLM framework. Moreover, the misalignment between adversarial CLIP training objectives and MLLMs' <b>generative understanding</b>
+creates a <b>semantic alignment gap</b>, impairing MLLMs' ability to perform <i>complex visual reasoning</i>.
+
+This leads us to explore whether current <b>large-scale adversarially pre-trained vision encoders</b>, which contain
+<i>rich robust representations</i>, can exhibit <b>strong semantic alignment</b> within the MLLM framework.
+
+<b><span style="color: blue;">Left:</span></b> We investigate the <b>multimodal alignment of robust encoders</b> by aligning
+the feature space of robust encoders using a <b>linear layer</b> with the pre-trained CLIP model, which has a strong multimodal
+feature representation. We then align robust encoders with CLIP’s text encoder to evaluate <b>robust zero-shot performance</b>,
+in order to assess their robust multimodal alignment.
+
+<b><span style="color: blue;">Right:</span></b> The results demonstrate a <b>strong correlation</b> between <b>model scale</b>,
+<b>training strategy</b>, and <b>robustness preservation</b> during CLIP alignment. <i>Small-scale models</i> (e.g., ViT-B and
+ResNet-101) suffer <b>significant robustness degradation</b> post-alignment, with accuracy dropping <i>below 60%</i> across
+all datasets.
+
+In contrast, <b>large-scale models</b> (ViT-H and ViT-G) successfully <b>retain their robustness</b> while acquiring
+<i>robust zero-shot capabilities</i>. Leveraging this insight, we integrate these robust encoders into the <b>LLaVA framework</b>,
+achieving <b>strong adversarial robustness</b> and <b>semantic alignment</b> in MLLMs <i>without additional specialized adversarial training</i>.
+
             </h2>
         </div>
     </div>
 </section>
-<!-- End teaser video -->
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <img src="./static/images/fig1.png">
+            <h2 class="subtitle has-text-centered">
+                <p align="justify"><b>Robust accuracy of Robust-LLaVA<sup>4</sup> on downstream vision-language tasks
+                    with adversarial examples crafted at
+                    &epsilon; = 4/255:</b> The original CLIP exhibits <i>minimal robustness</i>.
+
+                    Our proposed <b>Robust-LLaVA<sup>4</sup></b> <b>outperforms</b> state-of-the-art
+                    <span><b><a href="https://arxiv.org/abs/2402.12336" target="_blank"
+                                style="color: #007bff; text-decoration: underline;">FARE<sup>4</sup></a></b></span>
+                    and
+                    <span><b><a href="https://arxiv.org/abs/2409.07353" target="_blank"
+                                style="color: #007bff; text-decoration: underline;">Sim-CLIP<sup>4</sup></a></b></span>
+                    in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>maintaining high clean
+                        accuracy</i>.
+
+                </p>
+            </h2>
+        </div>
+    </div>
+</section>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -651,7 +714,9 @@
                     <img alt="MY ALT TEXT" src="static/images/transfer-attack-ensemble.png"/>
                     <h2 class="subtitle has-text-centered">
                         <b>Robustness evaluation</b> of <b>MLLMs</b> against <i>ensemble-based SSA-CWA transfer
-                        attacks</i> using the <span><b><a href="https://arxiv.org/abs/2406.07057" target="_blank" style="color: #007bff; text-decoration: underline;">MultiTrust</a></b></span> benchmarking framework.
+                        attacks</i> using the <span><b><a href="https://arxiv.org/abs/2406.07057" target="_blank"
+                                                          style="color: #007bff; text-decoration: underline;">MultiTrust</a></b></span>
+                        benchmarking framework.
                         Adversarial examples are crafted using an <i>ensemble of diverse vision models</i>, with
                         perturbations designed to <i>mislead object recognition</i>.
 
@@ -670,8 +735,10 @@
                     <!-- Your image here -->
                     <img alt="MY ALT TEXT" src="static/images/Table3_4.png"/>
                     <h2 class="subtitle has-text-centered">
-                        Comparison of various <b>vision encoders</b> integrated with LLaVA against <b>white-box</b> (<i>VisualAdv</i>)
-                        and <b>black-box</b> (<i>HADES</i>) jailbreak attacks.
+                        Comparison of various <b>vision encoders</b> integrated with LLaVA against <b>white-box</b> (<i><a href="https://arxiv.org/abs/2306.13213" target="_blank" style="color: #007bff; text-decoration: underline;">VisualAdv</a></i>)
+
+                        and <b>black-box</b> (<i><a href="https://arxiv.org/abs/2403.09792" target="_blank" style="color: #007bff; text-decoration: underline;">HADES</a></i>)
+ jailbreak attacks.
                         The <b>white-box results</b> (Table 3) show that LLaVA with the <i>original CLIP encoder</i> is
                         the <b>most vulnerable</b>, producing the highest number of toxic outputs.
                         In contrast, our <span><b>Robust-LLaVA<sup>4</sup><sub>G</sub></b></span> and <span><b>Robust-LLaVA<sup>4</sup><sub>H</sub></b></span>
@@ -723,8 +790,8 @@
                     <!-- Your image here -->
                     <img alt="MY ALT TEXT" src="static/images/Table22.png"/>
                     <h2 class="subtitle has-text-centered">
-                        Analysis of <b>hallucination behavior</b> in <b>vision-language models</b> using the <i>POPE
-                        dataset</i>.
+                        Analysis of <b>hallucination behavior</b> in <b>vision-language models</b> using the (<i><a href="https://arxiv.org/abs/2305.10355" target="_blank" style="color: #007bff; text-decoration: underline;">POPE dataset</a></i>)
+.
                         Results indicate that ensembling <i>robust models</i> with CLIP enhances <b>hallucination
                         mitigation</b>. However, this trend <i>does not hold</i> for ensembles
                         incorporating the adversarially fine-tuned CLIP variant, <span><b><a
@@ -744,75 +811,75 @@
     </div>
 
 
-<!--    &lt;!&ndash; Youtube video &ndash;&gt;-->
-<!--    <section class="hero is-small is-light">-->
-<!--        <div class="hero-body">-->
-<!--            <div class="container">-->
-<!--                &lt;!&ndash; Paper video. &ndash;&gt;-->
-<!--                <h2 class="title is-3">Video Presentation</h2>-->
-<!--                <div class="columns is-centered has-text-centered">-->
-<!--                    <div class="column is-four-fifths">-->
+    <!--    &lt;!&ndash; Youtube video &ndash;&gt;-->
+    <!--    <section class="hero is-small is-light">-->
+    <!--        <div class="hero-body">-->
+    <!--            <div class="container">-->
+    <!--                &lt;!&ndash; Paper video. &ndash;&gt;-->
+    <!--                <h2 class="title is-3">Video Presentation</h2>-->
+    <!--                <div class="columns is-centered has-text-centered">-->
+    <!--                    <div class="column is-four-fifths">-->
 
-<!--                        <div class="publication-video">-->
-<!--                            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
-<!--                            <iframe allow="autoplay; encrypted-media" allowfullscreen frameborder="0"-->
-<!--                                    src="https://www.youtube.com/embed/JkaxUblCGz0"></iframe>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-<!--    &lt;!&ndash; End youtube video &ndash;&gt;-->
-
-
-<!--    &lt;!&ndash; Video carousel &ndash;&gt;-->
-<!--    <section class="hero is-small">-->
-<!--        <div class="hero-body">-->
-<!--            <div class="container">-->
-<!--                <h2 class="title is-3">Another Carousel</h2>-->
-<!--                <div class="carousel results-carousel" id="results-carousel">-->
-<!--                    <div class="item item-video1">-->
-<!--                        <video autoplay controls height="100%" id="video1" loop muted poster="">-->
-<!--                            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--                            <source src="static/videos/carousel1.mp4"-->
-<!--                                    type="video/mp4">-->
-<!--                        </video>-->
-<!--                    </div>-->
-<!--                    <div class="item item-video2">-->
-<!--                        <video autoplay controls height="100%" id="video2" loop muted poster="">-->
-<!--                            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--                            <source src="static/videos/carousel2.mp4"-->
-<!--                                    type="video/mp4">-->
-<!--                        </video>-->
-<!--                    </div>-->
-<!--                    <div class="item item-video3">-->
-<!--                        <video autoplay controls height="100%" id="video3" loop muted poster="">\-->
-<!--                            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--                            <source src="static/videos/carousel3.mp4"-->
-<!--                                    type="video/mp4">-->
-<!--                        </video>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-<!--    &lt;!&ndash; End video carousel &ndash;&gt;-->
+    <!--                        <div class="publication-video">-->
+    <!--                            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
+    <!--                            <iframe allow="autoplay; encrypted-media" allowfullscreen frameborder="0"-->
+    <!--                                    src="https://www.youtube.com/embed/JkaxUblCGz0"></iframe>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+    <!--    &lt;!&ndash; End youtube video &ndash;&gt;-->
 
 
-<!--    &lt;!&ndash; Paper poster &ndash;&gt;-->
-<!--    <section class="hero is-small is-light">-->
-<!--        <div class="hero-body">-->
-<!--            <div class="container">-->
-<!--                <h2 class="title">Poster</h2>-->
+    <!--    &lt;!&ndash; Video carousel &ndash;&gt;-->
+    <!--    <section class="hero is-small">-->
+    <!--        <div class="hero-body">-->
+    <!--            <div class="container">-->
+    <!--                <h2 class="title is-3">Another Carousel</h2>-->
+    <!--                <div class="carousel results-carousel" id="results-carousel">-->
+    <!--                    <div class="item item-video1">-->
+    <!--                        <video autoplay controls height="100%" id="video1" loop muted poster="">-->
+    <!--                            &lt;!&ndash; Your video file here &ndash;&gt;-->
+    <!--                            <source src="static/videos/carousel1.mp4"-->
+    <!--                                    type="video/mp4">-->
+    <!--                        </video>-->
+    <!--                    </div>-->
+    <!--                    <div class="item item-video2">-->
+    <!--                        <video autoplay controls height="100%" id="video2" loop muted poster="">-->
+    <!--                            &lt;!&ndash; Your video file here &ndash;&gt;-->
+    <!--                            <source src="static/videos/carousel2.mp4"-->
+    <!--                                    type="video/mp4">-->
+    <!--                        </video>-->
+    <!--                    </div>-->
+    <!--                    <div class="item item-video3">-->
+    <!--                        <video autoplay controls height="100%" id="video3" loop muted poster="">\-->
+    <!--                            &lt;!&ndash; Your video file here &ndash;&gt;-->
+    <!--                            <source src="static/videos/carousel3.mp4"-->
+    <!--                                    type="video/mp4">-->
+    <!--                        </video>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+    <!--    &lt;!&ndash; End video carousel &ndash;&gt;-->
 
-<!--                <iframe height="550" src="static/pdfs/sample.pdf" width="100%">-->
-<!--                </iframe>-->
 
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-<!--    &lt;!&ndash;End paper poster &ndash;&gt;-->
+    <!--    &lt;!&ndash; Paper poster &ndash;&gt;-->
+    <!--    <section class="hero is-small is-light">-->
+    <!--        <div class="hero-body">-->
+    <!--            <div class="container">-->
+    <!--                <h2 class="title">Poster</h2>-->
+
+    <!--                <iframe height="550" src="static/pdfs/sample.pdf" width="100%">-->
+    <!--                </iframe>-->
+
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+    <!--    &lt;!&ndash;End paper poster &ndash;&gt;-->
 
 
     <!--BibTex citation -->
@@ -837,10 +904,6 @@
                             Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io"
                                                                                     target="_blank">Nerfies</a> project
                             page.
-                            You are free to borrow the source code of this website, we just ask that you link back to
-                            this page in the footer. <br> This website is licensed under a <a
-                                href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license" target="_blank">Creative
-                            Commons Attribution-ShareAlike 4.0 International License</a>.
                         </p>
 
                     </div>
@@ -856,13 +919,11 @@
     <!-- End of Statcounter Code -->
 
 
+    <!-- Statcounter tracking code -->
 
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-        <!-- Statcounter tracking code -->
-
-        <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-        <!-- End of Statcounter Code -->
+    <!-- End of Statcounter Code -->
 
 
 </body>
