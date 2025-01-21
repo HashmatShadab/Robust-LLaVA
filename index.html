@@ -473,33 +473,6 @@
 </section>
 <!-- End image carousel -->
 
-<!-- Image carousel -->
-<div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-            <h2 class="title is-3">Ensemble-based Transfer Attacks</h2>
-        </div>
-    </div>
-</div>
-
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container">
-            <div class="carousel results-carousel" id="results-carousel">
-                <div class="item">
-                    <!-- Your image here -->
-                    <img alt="MY ALT TEXT" src="static/images/transfer-attack-ensemble.png"/>
-                    <h2 class="subtitle has-text-centered">
-                       Ensemble-based Transfer Attacks
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End image carousel -->
-
-
 
 <!-- Image carousel -->
 <div class="container is-max-desktop">
@@ -597,23 +570,25 @@
                 <div class="item">
                     <!-- Your image here -->
                     <img
-                        alt="MY ALT TEXT"
-                        src="static/images/CC_L_1.png"
-                        style="display: block; max-height: 1000px; margin: 0 auto; object-fit: contain; width: auto;"
+                            alt="MY ALT TEXT"
+                            src="static/images/CC_L_1.png"
+                            style="display: block; max-height: 1000px; margin: 0 auto; object-fit: contain; width: auto;"
                     />
                     <h2 class="subtitle has-text-centered">
-                       Performance Under Increasing Corruption Severity. Visualization of how different robust vision encoders in LLaVA respond to corruption applied at varying severity levels.
+                        Performance Under Increasing Corruption Severity. Visualization of how different robust vision
+                        encoders in LLaVA respond to corruption applied at varying severity levels.
                     </h2>
                 </div>
                 <div class="item">
                     <!-- Your image here -->
                     <img
-                        alt="MY ALT TEXT"
-                        src="static/images/CC_L_2.png"
-                        style="display: block; max-height: 1000px; margin: 0 auto; object-fit: contain; width: auto;"
+                            alt="MY ALT TEXT"
+                            src="static/images/CC_L_2.png"
+                            style="display: block; max-height: 1000px; margin: 0 auto; object-fit: contain; width: auto;"
                     />
                     <h2 class="subtitle has-text-centered">
-                       Performance Under Increasing Corruption Severity. Visualization of how different robust vision encoders in LLaVA respond to corruption applied at varying severity levels.
+                        Performance Under Increasing Corruption Severity. Visualization of how different robust vision
+                        encoders in LLaVA respond to corruption applied at varying severity levels.
                     </h2>
                 </div>
             </div>
@@ -671,6 +646,26 @@
                         <i>high-quality captions</i> for adversarial examples, maintaining a <b>strong CIDEr score</b>.
                     </h2>
                 </div>
+                <div class="item" style="margin-bottom: 40px;">
+                    <!-- Your image here -->
+                    <img alt="MY ALT TEXT" src="static/images/transfer-attack-ensemble.png"/>
+                    <h2 class="subtitle has-text-centered">
+                        <b>Robustness evaluation</b> of <b>MLLMs</b> against <i>ensemble-based SSA-CWA transfer
+                        attacks</i> using the <span><b><a href="https://arxiv.org/abs/2406.07057" target="_blank" style="color: #007bff; text-decoration: underline;">MultiTrust</a></b></span> benchmarking framework.
+                        Adversarial examples are crafted using an <i>ensemble of diverse vision models</i>, with
+                        perturbations designed to <i>mislead object recognition</i>.
+
+                        Model performance is assessed on <b>100 relabeled NIPS17 images</b>, with <b>GPT-4</b>
+                        determining the correctness of generated descriptions.
+                        The figure illustrates that <span><b>Robust-LLaVA<sup>4</sup><sub>G</sub></b></span> and
+                        <span><b>Robust-LLaVA<sup>4</sup><sub>H</sub></b></span> achieve <b>10-12% higher accuracy</b>
+                        than their closest robust counterparts,
+                        demonstrating <b>superior resilience</b> against <i>highly transferable adversarial attacks</i>.
+
+
+                    </h2>
+                </div>
+
                 <div class="item" style="margin-bottom: 40px;">
                     <!-- Your image here -->
                     <img alt="MY ALT TEXT" src="static/images/Table3_4.png"/>
@@ -859,6 +854,44 @@
     <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
+
+
+    <section class="hero is-small is-light">
+        <div class="hero-body">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Quantitative Results</h2>
+                    <div class="item" style="margin-bottom: 40px;">
+                        <!-- Your image here -->
+                        <img alt="MY ALT TEXT" src="static/images/transfer-attack-ensemble.png"/>
+                        <h2 class="subtitle has-text-centered">
+                            On <b>untargeted attacks</b>, results across <b>six datasets</b>, covering <i>image
+                            captioning</i> and <i>visual question answering</i> tasks,
+                            both <span><b>Robust-LLaVA<sup>G</sup></b></span> and
+                            <span><b>Robust-LLaVA<sup>4</sup><sub>H</sub></b></span> maintain
+                            <i>reasonable clean performance</i> while achieving <b>substantial robustness
+                            improvements</b>
+                            over <span><b><a href="https://arxiv.org/abs/2402.12336" target="_blank"
+                                             style="color: #007bff; text-decoration: underline;">FARE<sup>4</sup></a></b></span>
+                            and <span><b><a href="https://arxiv.org/abs/2409.07353" target="_blank"
+                                            style="color: #007bff; text-decoration: underline;">Sim-CLIP<sup>4</sup></a></b></span>
+                            against
+                            adversarial attacks, striking the <i>right balance</i> between <b>clean</b> and <b>adversarial
+                            generalization</b>.
+
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Statcounter tracking code -->
+
+        <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+        <!-- End of Statcounter Code -->
+
 
 </body>
 </html>
