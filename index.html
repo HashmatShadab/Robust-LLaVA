@@ -566,55 +566,78 @@
                     <!-- Your image here -->
                     <img alt="MY ALT TEXT" src="static/images/Table1.png"/>
                     <h2 class="subtitle has-text-centered">
-                        On untargeted attack results across six datasets, covering image captioning and visual question
-                        answering tasks,
-                        both <span>Robust-LLaVA<sup>G</sup></span> and <span>Robust-LLaVA<sup>4</sup><sub>H</sub></span> maintain
-                        comparable clean performance while achieving substantial robustness improvements against
-                        adversarial attacks, striking the right balance between clean and adversarial generalization.
+                        On <b>untargeted attacks</b>, results across <b>six datasets</b>, covering <i>image
+                        captioning</i> and <i>visual question answering</i> tasks,
+                        both <span><b>Robust-LLaVA<sup>G</sup></b></span> and
+                        <span><b>Robust-LLaVA<sup>4</sup><sub>H</sub></b></span> maintain
+                        <i>reasonable clean performance</i> while achieving <b>substantial robustness improvements</b>
+                        against
+                        adversarial attacks, striking the <i>right balance</i> between <b>clean</b> and <b>adversarial
+                        generalization</b>.
+
                     </h2>
                 </div>
                 <div class="item" style="margin-bottom: 40px;">
                     <!-- Your image here -->
                     <img alt="MY ALT TEXT" src="static/images/Table2.png"/>
                     <h2 class="subtitle has-text-centered">
-                        Both <span>FARE<sup>4</sup></span> and <span>Sim-CLIP<sup>4</sup></span> show robustness against
-                        the targetted attacks, but break in few cases at high perturbation budgets (<span>ε = 8/255</span>). In contrast, <span>Robust-LLaVA<sup>4</sup><sub>G</sub></span> and <span>Robust-LLaVA<sup>4</sup><sub>H</sub></span> remain fully robust to these attacks even
-                        at high perturbation budgets. This indicates a strong resistance to generating the attacker's
-                        targeted output. The robustness of \oursgiant stands out further as it continues to generate
-                        high-quality captions for adversarial examples, maintaining a strong CIDEr score.
+                        Both <span><b>FARE<sup>4</sup></b></span> and <span><b>Sim-CLIP<sup>4</sup></b></span> show <i>robustness</i>
+                        against
+                        <b>targeted attacks</b>, but <i>break</i> in a few cases at high perturbation budgets (<span><b>ε = 8/255</b></span>).
+                        In contrast, <span><b>Robust-LLaVA<sup>4</sup><sub>G</sub></b></span> and
+                        <span><b>Robust-LLaVA<sup>4</sup><sub>H</sub></b></span>
+                        remain <b>fully robust</b> to these attacks even at high perturbation budgets.
+                        This indicates a <i>strong resistance</i> to generating the attacker's targeted output.
+                        The robustness of <span><b>Robust-LLaVA<sup>4</sup><sub>G</sub></b></span> stands out further as
+                        it continues to generate
+                        <i>high-quality captions</i> for adversarial examples, maintaining a <b>strong CIDEr score</b>.
                     </h2>
                 </div>
                 <div class="item" style="margin-bottom: 40px;">
                     <!-- Your image here -->
                     <img alt="MY ALT TEXT" src="static/images/Table3_4.png"/>
                     <h2 class="subtitle has-text-centered">
-                        Comparison of various vision encoders integrated with LLaVA against white-box
-                        (VisualAdv) and black-box (HADES) jailbreak attacks. The white-box results
-                        (Table 3) show that LLaVA with the original CLIP encoder is the most vulnerable,
-                        producing the highest number of toxic outputs, while our Robust-LLaVA models (<span>Robust-LLaVA<sup>4</sup><sub>G</sub></span> and <span>Robust-LLaVA<sup>4</sup><sub>H</sub></span>) significantly reduce toxic content generation. The black-box results
-                        (Table 4) highlight the effectiveness of different models against HADES attacks,
-                        with the original CLIP encoder exhibiting the highest Attack Success Rate (ASR). In contrast,
-                        our Robust-LLaVA models achieve the lowest ASR, demonstrating superior resilience across
-                        multiple adversarial scenarios. </h2>
+                        Comparison of various <b>vision encoders</b> integrated with LLaVA against <b>white-box</b> (<i>VisualAdv</i>)
+                        and <b>black-box</b> (<i>HADES</i>) jailbreak attacks.
+                        The <b>white-box results</b> (Table 3) show that LLaVA with the <i>original CLIP encoder</i> is
+                        the <b>most vulnerable</b>, producing the highest number of toxic outputs.
+                        In contrast, our <span><b>Robust-LLaVA<sup>4</sup><sub>G</sub></b></span> and <span><b>Robust-LLaVA<sup>4</sup><sub>H</sub></b></span>
+                        models <b>significantly reduce toxic content generation</b>.
+
+                        The <b>black-box results</b> (Table 4) highlight the effectiveness of different models against
+                        <i>HADES attacks</i>,
+                        with the <i>original CLIP encoder</i> exhibiting the <b>highest Attack Success Rate (ASR)</b>.
+                        In contrast, our <span><b>Robust-LLaVA</b></span> models achieve the <b>lowest ASR</b>,
+                        demonstrating <i>superior resilience</i> across multiple adversarial scenarios.
+                    </h2>
                 </div>
                 <div class="item" style="margin-bottom: 40px;">
                     <!-- Your image here -->
                     <img alt="MY ALT TEXT" src="static/images/Table14.png"/>
                     <h2 class="subtitle has-text-centered">
-                        Analysis of vision encoder ensembles in the MLLM framework, evaluating
-                        robustness across multiple benchmarks, including VQAv2, VizWiz, and OKVQA. Results confirm that ensemble robustness is constrained
-                        by the weakest vision encoder. Across all configurations, our findings emphasize that the least robust component in the ensemble dictates
-                        the overall robustness performance, underscoring the necessity of strengthening individual vision
-                        encoders to enhance ensemble resilience. </h2>
+                        Evaluation of <b>vision encoder ensembles</b> within the <b>MLLM framework</b>, assessing their
+                        <b>robustness</b> across multiple benchmarks.
+                        Our analysis reveals that an ensemble’s robustness is <i>limited by its weakest vision
+                        encoder</i>.
+
+                        Across all configurations, we observe that the <b>most vulnerable component</b> dictates the
+                        overall robustness,
+                        highlighting the <b>importance</b> of reinforcing individual vision encoders to <i>strengthen
+                        ensemble resilience</i>.
+
+                    </h2>
                 </div>
                 <div class="item" style="margin-bottom: 40px;">
                     <!-- Your image here -->
                     <img alt="MY ALT TEXT" src="static/images/Table19_20.png"/>
                     <h2 class="subtitle has-text-centered">
-                        Evaluation of prompt formatting strategies at inference time to enhance model
-                        robustness against adversarial examples in the COCO captioning task. Results indicate that strategic
-                        prompt modifications improve robustness; however, this approach remains vulnerable to adaptive
-                        attacks, where adversaries can tailor adversarial examples to bypass these defenses. </h2>
+                        Assessment of <b>prompt formatting strategies</b> during inference to enhance <b>model
+                        robustness</b> against <i>adversarial examples</i> in the <i>image captioning task</i>.
+                        Results reveal that <b>strategic prompt modifications</b> can <i>improve robustness</i>;
+                        however, this approach remains <b>susceptible</b> to <i>adaptive attacks</i>,
+                        where adversaries can incorporate the modified prompts to craft adversarial examples to <i>bypass
+                        these defenses</i>.
+                    </h2>
                 </div>
                 <div class="item" style="margin-bottom: 40px;">
                     <!-- Your image here -->
@@ -627,13 +650,19 @@
                     <!-- Your image here -->
                     <img alt="MY ALT TEXT" src="static/images/Table22.png"/>
                     <h2 class="subtitle has-text-centered">
-                        Expanded analysis of hallucination behavior in vision-language models using
-                        the POPE dataset. Results show that ensembling robust
-                        models with CLIP improves hallucination mitigation, but this trend does not hold for ensembles
-                        incorporating the adversarially fine-tuned CLIP variant, <span>FARE<sup>4</sup></span>, which exhibits reduced
-                        generalization capabilities. Among robust models, <span>Robust-LLaVA<sup>4</sup><sub>G</sub></span> and <span>Robust-LLaVA<sup>4</sup><sub>H</sub></span> achieve the best
-                        performance in mitigating object hallucinations, demonstrating superior reliability in object
-                        recognition while maintaining robustness. </h2>
+                        Analysis of <b>hallucination behavior</b> in <b>vision-language models</b> using the <i>POPE
+                        dataset</i>.
+                        Results indicate that ensembling <i>robust models</i> with CLIP enhances <b>hallucination
+                        mitigation</b>. However, this trend <i>does not hold</i> for ensembles
+                        incorporating the adversarially fine-tuned CLIP variant, <span><b>FARE<sup>4</sup></b></span>,
+                        which exhibits <b>reduced generalization</b>.
+
+                        Among robust models, <span><b>Robust-LLaVA<sup>4</sup><sub>G</sub></b></span> and <span><b>Robust-LLaVA<sup>4</sup><sub>H</sub></b></span>
+                        demonstrate the <b>best performance</b>
+                        in mitigating <i>object hallucinations</i>, showcasing <b>superior reliability</b> in object
+                        recognition while maintaining robustness.
+
+                    </h2>
                 </div>
             </div>
         </div>
