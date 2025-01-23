@@ -22,6 +22,8 @@ and [Salman Khan](https://salman-h-khan.github.io)
 
 * **(Jan 24, 2025)**
     * Training and evaluation codes are released.
+    * Robust-LLaVA-H and Robust-LLaVA-G released: Excited to release the new integration of LLaVA with large-scale
+      robust image encoders, ViT-H and ViT-G, respectively. :fire::fire:
 
 <hr />
 
@@ -41,9 +43,12 @@ and [Salman Khan](https://salman-h-khan.github.io)
 > jailbreaking attempts , without requiring additional adversarial training, and (2) end-to-end MLLM optimization
 > with these robust encoders facilitates enhanced adaptation of language components to robust visual features,
 > substantially outperforming existing plug-and-play methodologies on complex reasoning tasks.
-> Through systematic evaluation across visual question-answering, image captioning, and jail-break attacks, we demonstrate
-> that MLLMs trained with these robust encoders achieve superior adversarial robustness while maintaining favorable clean
-> performance. Our framework achieves 2× and 1.5× average robustness gains in captioning and VQA tasks, respectively, and
+> Through systematic evaluation across visual question-answering, image captioning, and jail-break attacks, we
+> demonstrate
+> that MLLMs trained with these robust encoders achieve superior adversarial robustness while maintaining favorable
+> clean
+> performance. Our framework achieves 2× and 1.5× average robustness gains in captioning and VQA tasks, respectively,
+> and
 > delivers over 10% improvement against advanced jailbreaking attacks compared to state-of-the-art methods.
 
 </div>
@@ -67,9 +72,12 @@ and [Salman Khan](https://salman-h-khan.github.io)
 <a name="Installation"/>
 
 ## 💿 Installation
-You can follow the instrcutions mention in the [LLaVA](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install) codebase to install the required dependencies or follow the below steps:
+
+You can follow the instrcutions mention in the [LLaVA](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install)
+codebase to install the required dependencies or follow the below steps:
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/HashmatShadab/Robust-LLaVA 
 cd Robust-LLaVA
@@ -78,15 +86,43 @@ cd Robust-LLaVA
 2. Install the required dependencies:
 
 ```python
-conda create -n llava_v python=3.10 -y
-conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=11.8 -c pytorch -c nvidia 
-pip install -e .
-pip install -e ".[train]"
-pip install flash-attn --no-build-isolation
-pip install open-clip-torch==2.19.0
-pip install pycocoevalcap==1.2
-pip install inflection==0.5.1
-pip install torchattacks
+conda
+create - n
+llava_v
+python = 3.10 - y
+conda
+install
+pytorch == 2.1
+.2
+torchvision == 0.16
+.2
+torchaudio == 2.1
+.2
+pytorch - cuda = 11.8 - c
+pytorch - c
+nvidia
+pip
+install - e.
+pip
+install - e
+".[train]"
+pip
+install
+flash - attn - -no - build - isolation
+pip
+install
+open - clip - torch == 2.19
+.0
+pip
+install
+pycocoevalcap == 1.2
+pip
+install
+inflection == 0.5
+.1
+pip
+install
+torchattacks
 ```
 
 <a name="Available-Models"/>
@@ -101,9 +137,6 @@ pip install torchattacks
 4. SegResNet : `segresnet`
 5. UMamba-B : `umamba_bot`
 6. UMamba-E : `umamba_enc`
-
-
-
 
 <a name="Training"/>
 
