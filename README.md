@@ -77,7 +77,7 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
     <img src="./assets/Table1.png" alt="Robust-LLaVA Diagram" width="800">
 
 <p align="justify">
-<b>On <b>untargeted attacks</b>, results across <b>six datasets</b>, covering <i>image
+<b>On <b>untargeted attacks</b>, results across </b><b>six datasets</b>, covering <i>image
                         captioning</i> and <i>visual question answering</i> tasks,
                         both <span><b>Robust-LLaVA<sup>4</sup><sub>G</sub></b></span> and
                         <span><b>Robust-LLaVA<sup>4</sup><sub>H</sub></b></span> maintain
@@ -113,25 +113,44 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
 </p>
 </div>
 
-<div align="center">
-    <img src="./assets/Table3_4.png" alt="Robust-LLaVA Diagram" width="800">
-</div>
+[//]: # (<div align="center">)
 
-<p align="justify">
-<b><b>Comparison of various <span><b>vision encoders</b></span> integrated with <b>LLaVA</b> against <b>white-box</b> 
-(<i><a href="https://arxiv.org/abs/2306.13213" target="_blank" style="color: #007bff; text-decoration: underline;">VisualAdv</a></i>)
-and <b>black-box</b> 
-(<i><a href="https://arxiv.org/abs/2403.09792" target="_blank" style="color: #007bff; text-decoration: underline;">HADES</a></i>) 
-jailbreak attacks.</b> The <b>white-box results</b> (Table 3) show that <i>LLaVA with the original CLIP encoder</i> is the 
-<b>most vulnerable</b>, producing the highest number of toxic outputs. In contrast, our 
-<span><b>Robust-LLaVA<sup>4</sup><sub>G</sub></b></span> and 
-<span><b>Robust-LLaVA<sup>4</sup><sub>H</sub></b></span> models 
-<b>significantly reduce toxic content generation</b>. The <b>black-box results</b> (Table 4) highlight the effectiveness of different models against 
-<i>HADES attacks</i>, with the <i>original CLIP encoder</i> exhibiting the 
-<b>highest Attack Success Rate (ASR)</b>. In contrast, our 
-<span><b>Robust-LLaVA</b></span> models achieve the <b>lowest ASR</b>, 
-demonstrating <i>superior resilience</i> across multiple adversarial scenarios.
-</p>
+[//]: # (    <img src="./assets/Table3_4.png" alt="Robust-LLaVA Diagram" width="800">)
+
+[//]: # (</div>)
+
+[//]: # ()
+[//]: # (<p align="justify">)
+
+[//]: # (<b><b>Comparison of various <span><b>vision encoders</b></span> integrated with <b>LLaVA</b> against <b>white-box</b> )
+
+[//]: # (&#40;<i><a href="https://arxiv.org/abs/2306.13213" target="_blank" style="color: #007bff; text-decoration: underline;">VisualAdv</a></i>&#41;)
+
+[//]: # (and <b>black-box</b> )
+
+[//]: # (&#40;<i><a href="https://arxiv.org/abs/2403.09792" target="_blank" style="color: #007bff; text-decoration: underline;">HADES</a></i>&#41; )
+
+[//]: # (jailbreak attacks.</b> The <b>white-box results</b> &#40;Table 3&#41; show that <i>LLaVA with the original CLIP encoder</i> is the )
+
+[//]: # (<b>most vulnerable</b>, producing the highest number of toxic outputs. In contrast, our )
+
+[//]: # (<span><b>Robust-LLaVA<sup>4</sup><sub>G</sub></b></span> and )
+
+[//]: # (<span><b>Robust-LLaVA<sup>4</sup><sub>H</sub></b></span> models )
+
+[//]: # (<b>significantly reduce toxic content generation</b>. The <b>black-box results</b> &#40;Table 4&#41; highlight the effectiveness of different models against )
+
+[//]: # (<i>HADES attacks</i>, with the <i>original CLIP encoder</i> exhibiting the )
+
+[//]: # (<b>highest Attack Success Rate &#40;ASR&#41;</b>. In contrast, our )
+
+[//]: # (<span><b>Robust-LLaVA</b></span> models achieve the <b>lowest ASR</b>, )
+
+[//]: # (demonstrating <i>superior resilience</i> across multiple adversarial scenarios.)
+
+[//]: # (</p>)
+
+
 
 
 ## Qualitative Analysis :mag:
@@ -277,43 +296,17 @@ cd Robust-LLaVA
 2. Install the required dependencies:
 
 ```python
-conda
-create - n
-llava_v
-python = 3.10 - y
-conda
-install
-pytorch == 2.1
-.2
-torchvision == 0.16
-.2
-torchaudio == 2.1
-.2
-pytorch - cuda = 11.8 - c
-pytorch - c
-nvidia
-pip
-install - e.
-pip
-install - e
-".[train]"
-pip
-install
-flash - attn - -no - build - isolation
-pip
-install
-open - clip - torch == 2.19
-.0
-pip
-install
-pycocoevalcap == 1.2
-pip
-install
-inflection == 0.5
-.1
-pip
-install
-torchattacks
+conda create -n llava_v python=3.10 -y
+conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=11.8 -c pytorch -c nvidia 
+pip install -e .
+pip install -e ".[train]"
+pip install flash-attn --no-build-isolation
+
+pip install open-clip-torch==2.19.0
+pip install pycocoevalcap==1.2
+pip install inflection==0.5.1
+pip install torchattacks
+
 ```
 
 <a name="Available-Models"/>
