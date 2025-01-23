@@ -53,6 +53,21 @@ and [Salman Khan](https://salman-h-khan.github.io)
 
 </div>
 
+<div align="center">
+    <img src="./assets/fig1.png" alt="Robust-LLaVA Diagram" width="600">
+
+<p align="justify">
+<b>Robust accuracy of Robust-LLaVA<sup>4</sup> on downstream vision-language tasks
+with adversarial examples crafted at &epsilon; = 4/255:</b> The original CLIP exhibits 
+<i>minimal robustness</i>.Our proposed <b>Robust-LLaVA<sup>4</sup></b> <b>outperforms</b> state-of-the-art 
+<span><b><a href="https://arxiv.org/abs/2402.12336" target="_blank"
+style="color: #007bff; text-decoration: underline;">FARE<sup>4</sup></a></b></span> 
+and <span><b><a href="https://arxiv.org/abs/2409.07353" target="_blank"
+style="color: #007bff; text-decoration: underline;">Sim-CLIP<sup>4</sup></a></b></span> 
+in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>maintaining high clean accuracy</i>.
+</p>
+</div>
+
 ## Contents
 
 1) [Installation](#Installation)
