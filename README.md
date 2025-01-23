@@ -74,6 +74,7 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
 
 ## Quantitative Evaluation 📊
 
+We provide instructions to reproduce VideoGPT+ results on VCGBench, VCGBench-Diverse and MVBench. Please follow the instructions at eval/README.md.
 
 <div align="center">
     <img src="./assets/Table1.png" alt="Robust-LLaVA Diagram" width="800">
@@ -132,6 +133,13 @@ jailbreak attacks.</b> The <b>white-box results</b> (Table 3) show that <i>LLaVA
 <span><b>Robust-LLaVA</b></span> models achieve the <b>lowest ASR</b>, 
 demonstrating <i>superior resilience</i> across multiple adversarial scenarios.
 </p>
+
+---
+
+## Training :train:
+We provide scripts for pretraining and finetuning of VideoGPT+. Please follow the instructions at [scripts/README.md](scripts/README.md).
+
+---
 
 
 ## Qualitative Analysis :mag:
@@ -241,6 +249,7 @@ demonstrating <i>superior resilience</i> across multiple adversarial scenarios.
 <div style="width:auto; height:134px; overflow:hidden;">
   <img src="./assets/CC_6.png" style="width:auto; height:auto;">
 </div>
+
 
 
 
@@ -590,15 +599,10 @@ loaded.
 
 <a name="bibtex"/>
 
-## 📚 BibTeX
+## 📜 BibTeX
 
 ```bibtex
-@article{malik2024evaluating,
-  title={On Evaluating Adversarial Robustness of Volumetric Medical Segmentation Models},
-  author={Malik, Hashmat Shadab and Saeed, Numan and Hanif, Asif and Naseer, Muzammal and Yaqub, Mohammad and Khan, Salman and Khan, Fahad Shahbaz},
-  journal={arXiv preprint arXiv:2406.08486},
-  year={2024}
-}
+
 ```
 
 <hr />
@@ -615,8 +619,6 @@ Should you have any question, please create an issue on this repository or conta
 
 ## 📚 References
 
-Our code is based
-on [VAFA](https://github.com/asif-hanif/vafa?tab=readme-ov-file), [On the Adversarial Robustness of Visual Transformer](https://github.com/RulinShao/on-the-adversarial-robustness-of-visual-transformer)
-and [monai](https://github.com/Project-MONAI/MONAI) libray. We thank them for open-sourcing their codebase.
++ [LLaVA](https://github.com/haotian-liu/LLaVA): Our code base is build upon LLaVA and [RobustVLM](https://github.com/chs20/RobustVLM).  We thank them for open-sourcing their codebase.
 
 
