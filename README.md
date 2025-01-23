@@ -168,6 +168,61 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
   <img src="./assets/IC_T_6.png" style="width:auto; height:auto;">
 </div>
 
+### Untargetted Attack on Visual Question Answering(VQA) Task
+
+<div style="width:auto; height:145px; overflow:hidden;">
+  <img src="./assets/VQA_U_1.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:140px; overflow:hidden;">
+  <img src="./assets/VQA_U_2.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:142px; overflow:hidden;">
+  <img src="./assets/VQA_U_3.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:134px; overflow:hidden;">
+  <img src="./assets/VQA_U_4.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:132px; overflow:hidden;">
+  <img src="./assets/VQA_U_5.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:162px; overflow:hidden;">
+  <img src="./assets/VQA_U_6.png" style="width:auto; height:auto;">
+</div>
+
+
+### Robustness to Common Corruptions on Image Captioning Task
+
+<div style="width:auto; height:145px; overflow:hidden;">
+  <img src="./assets/CC_1.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:140px; overflow:hidden;">
+  <img src="./assets/CC_2.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:142px; overflow:hidden;">
+  <img src="./assets/CC_3.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:134px; overflow:hidden;">
+  <img src="./assets/CC_4.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:142px; overflow:hidden;">
+  <img src="./assets/CC_5.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:134px; overflow:hidden;">
+  <img src="./assets/CC_6.png" style="width:auto; height:auto;">
+</div>
+
+
+
 ## Contents
 
 1) [Installation](#Installation)
