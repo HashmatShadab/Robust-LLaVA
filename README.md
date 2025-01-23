@@ -7,6 +7,8 @@
 [Fahad Shahbaz Khan](https://scholar.google.es/citations?user=zvaeYnUAAAAJ&hl=en),
 and [Salman Khan](https://salman-h-khan.github.io)
 
+#### **Mohamed bin Zayed University of AI (MBZUAI)**
+
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2406.08486)
 
 [//]: # ([![Video]&#40;https://img.shields.io/badge/Video-Presentation-F9D371&#41;]&#40;https://drive.google.com/file/d/1ZdUV83RvyL4mqCyxlqqD468VbRRAGdDY/view?usp=sharing&#41;)
@@ -18,7 +20,7 @@ and [Salman Khan](https://salman-h-khan.github.io)
 
 <hr />
 
-# :fire: News
+# :fire: Updates
 
 * **(Jan 24, 2025)**
     * Training and evaluation codes are released.
@@ -26,6 +28,20 @@ and [Salman Khan](https://salman-h-khan.github.io)
       robust image encoders, ViT-H and ViT-G, respectively. :fire::fire:
 
 <hr />
+<div align="center">
+    <img src="./assets/fig1.png" alt="Robust-LLaVA Diagram" width="600">
+
+<p align="justify">
+<b>Robust accuracy of Robust-LLaVA<sup>4</sup> on downstream vision-language tasks
+with adversarial examples crafted at &epsilon; = 4/255:</b> The original CLIP integrated into LLaVA exhibits 
+<i>minimal robustness</i>. Our proposed <b>Robust-LLaVA<sup>4</sup></b> <b>outperforms</b> state-of-the-art 
+robust CLIP models, such as <span><b><a href="https://arxiv.org/abs/2402.12336" target="_blank"
+style="color: #007bff; text-decoration: underline;">FARE<sup>4</sup></a></b></span> 
+and <span><b><a href="https://arxiv.org/abs/2409.07353" target="_blank"
+style="color: #007bff; text-decoration: underline;">Sim-CLIP<sup>4</sup></a></b></span> 
+in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>maintaining high clean accuracy</i>.
+</p>
+</div>
 
 <div style="text-align: justify;">
 
@@ -53,20 +69,52 @@ and [Salman Khan](https://salman-h-khan.github.io)
 
 </div>
 
+
+## Quantitative Evaluation 📊
+
+
 <div align="center">
-    <img src="./assets/fig1.png" alt="Robust-LLaVA Diagram" width="600">
+    <img src="./assets/Table1.png" alt="Robust-LLaVA Diagram" width="600">
 
 <p align="justify">
-<b>Robust accuracy of Robust-LLaVA<sup>4</sup> on downstream vision-language tasks
-with adversarial examples crafted at &epsilon; = 4/255:</b> The original CLIP exhibits 
-<i>minimal robustness</i>.Our proposed <b>Robust-LLaVA<sup>4</sup></b> <b>outperforms</b> state-of-the-art 
-<span><b><a href="https://arxiv.org/abs/2402.12336" target="_blank"
-style="color: #007bff; text-decoration: underline;">FARE<sup>4</sup></a></b></span> 
-and <span><b><a href="https://arxiv.org/abs/2409.07353" target="_blank"
-style="color: #007bff; text-decoration: underline;">Sim-CLIP<sup>4</sup></a></b></span> 
-in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>maintaining high clean accuracy</i>.
+<b>On <b>untargeted attacks</b>, results across <b>six datasets</b>, covering <i>image
+                        captioning</i> and <i>visual question answering</i> tasks,
+                        both <span><b>Robust-LLaVA<sup>4</sup><sub>G</sub></b></span> and
+                        <span><b>Robust-LLaVA<sup>4</sup><sub>H</sub></b></span> maintain
+                        <i>reasonable clean performance</i> while achieving <b>substantial robustness improvements</b>
+                        over <span><b><a href="https://arxiv.org/abs/2402.12336" target="_blank"
+                                         style="color: #007bff; text-decoration: underline;">FARE<sup>4</sup></a></b></span>
+                        and <span><b><a href="https://arxiv.org/abs/2409.07353" target="_blank"
+                                        style="color: #007bff; text-decoration: underline;">Sim-CLIP<sup>4</sup></a></b></span>
+                        against
+                        adversarial attacks, striking the <i>right balance</i> between <b>clean</b> and <b>adversarial
+                        generalization</b>.
 </p>
 </div>
+
+<div align="center">
+    <img src="./assets/Table2.png" alt="Robust-LLaVA Diagram" width="600">
+
+<p align="justify">
+<b>On  Both <span><b><a href="https://arxiv.org/abs/2402.12336" target="_blank"
+                                         style="color: #007bff; text-decoration: underline;">FARE<sup>4</sup></a></b></span>
+                        and <span><b><a href="https://arxiv.org/abs/2409.07353" target="_blank"
+                                        style="color: #007bff; text-decoration: underline;">Sim-CLIP<sup>4</sup></a></b></span>
+                        show <i>robustness</i>
+                        against
+                        <b>targeted attacks</b>, but <i>break</i> in a few cases at high perturbation budgets (<span><b>ε = 8/255</b></span>).
+                        In contrast, <span><b>Robust-LLaVA<sup>4</sup><sub>G</sub></b></span> and
+                        <span><b>Robust-LLaVA<sup>4</sup><sub>H</sub></b></span>
+                        remain <b>fully robust</b> to these attacks even at high perturbation budgets.
+                        This indicates a <i>strong resistance</i> to generating the attacker's targeted output.
+                        The robustness of <span><b>Robust-LLaVA<sup>4</sup><sub>G</sub></b></span> stands out further as
+                        it continues to generate
+                        <i>high-quality captions</i> for adversarial examples, maintaining a <b>strong CIDEr score</b>.
+</p>
+</div>
+
+## Qualitative Analysis :mag:
+
 
 ## Contents
 
