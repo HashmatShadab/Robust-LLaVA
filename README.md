@@ -305,13 +305,13 @@ pip install torchattacks
 
 We provide the following adversarially fine-tuned ViT-L/14 CLIP models (approx. 1.1 GB each):
 
-| Model                    | Link                                                                                           |
-|--------------------------|------------------------------------------------------------------------------------------------|
-| CLIP                     | [Link]() |
-| FARE<sup>4</sup>         | [Link]() |
-| SimCLIP<sup>4</sup>      | [Link]() |
-| Robust-LLaVA<sup>4</sup> | [Link]() |
-| Robust-LLaVA<sup>4</sup> | [Link]() |
+| Model                                | Link                                                                                           |
+|--------------------------------------|------------------------------------------------------------------------------------------------|
+| CLIP                                 | [Link]() |
+| FARE<sup>4</sup>                     | [Link]() |
+| SimCLIP<sup>4</sup>                  | [Link]() |
+| Robust-LLaVA<sup>4</sup><sub>H</sub> | [Link]() |
+| Robust-LLaVA<sup>4</sup><sub>G</sub> | [Link]() |
 
 The models are also available on [HuggingFace]().
 
