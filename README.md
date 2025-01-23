@@ -301,11 +301,22 @@ pip install torchattacks
 
 <a name="Available-Models"/>
 
-## 🏁 Available Models
+## 🏁 Model Zoo
 
-### Models available:
+We provide the following adversarially fine-tuned ViT-L/14 CLIP models (approx. 1.1 GB each):
 
+| Model                    | Link                                                                                           |
+|--------------------------|------------------------------------------------------------------------------------------------|
+| CLIP                     | [Link]() |
+| FARE<sup>4</sup>         | [Link]() |
+| SimCLIP<sup>4</sup>      | [Link]() |
+| Robust-LLaVA<sup>4</sup> | [Link]() |
+| Robust-LLaVA<sup>4</sup> | [Link]() |
 
+The models are also available on [HuggingFace]().
+
+FARE<sup>4</sup> and SimCLIP<sup>4</sup>  models are adversarially fine-tuned for few epochs on ImageNet and then plugged into the LLaVA
+framework without further training.
 <a name="Training"/>
 
 ## 🚀 Training
