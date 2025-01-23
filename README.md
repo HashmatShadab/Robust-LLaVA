@@ -74,7 +74,7 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
 
 
 <div align="center">
-    <img src="./assets/Table1.png" alt="Robust-LLaVA Diagram" width="600">
+    <img src="./assets/Table1.png" alt="Robust-LLaVA Diagram" width="800">
 
 <p align="justify">
 <b>On <b>untargeted attacks</b>, results across <b>six datasets</b>, covering <i>image
@@ -93,7 +93,7 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
 </div>
 
 <div align="center">
-    <img src="./assets/Table2.png" alt="Robust-LLaVA Diagram" width="600">
+    <img src="./assets/Table2.png" alt="Robust-LLaVA Diagram" width="800">
 
 <p align="justify">
 <b>On  Both <span><b><a href="https://arxiv.org/abs/2402.12336" target="_blank"
