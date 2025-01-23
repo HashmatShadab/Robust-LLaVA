@@ -25,6 +25,7 @@ and [Salman Khan](https://salman-h-khan.github.io)
 
 <hr />
 
+<div style="text-align: justify;">
 
 > **Abstract:** Multi-modal Large Language Models (MLLMs) have demonstrated impressive capabilities in vision-language
 > tasks, but their reliance on visual processing introduces critical security vulnerabilities. Their vision encoders
@@ -45,6 +46,8 @@ and [Salman Khan](https://salman-h-khan.github.io)
 > performance. Our framework achieves 2× and 1.5× average robustness gains in captioning and VQA tasks, respectively, and
 > delivers over 10% improvement against advanced jailbreaking attacks compared to state-of-the-art methods.
 
+</div>
+
 ## Contents
 
 1) [Installation](#Installation)
@@ -64,49 +67,26 @@ and [Salman Khan](https://salman-h-khan.github.io)
 <a name="Installation"/>
 
 ## 💿 Installation
+You can follow the instrcutions mention in the [LLaVA](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install) codebase to install the required dependencies or follow the below steps:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/HashmatShadab/Robust-LLaVA 
+cd Robust-LLaVA
+```
+
+2. Install the required dependencies:
 
 ```python
-
-conda
-create - n
-med3d
-python = 3.10
-conda
-install
-pytorch == 2.0
-.1
-torchvision == 0.15
-.2
-torchaudio == 2.0
-.2
-pytorch - cuda = 11.7 - c
-pytorch - c
-nvidia
-pip
-install
-packaging
-pip
-install
-causal - conv1d == 1.1
-.1
-pip
-install
-mamba - ssm == 1.1
-.4
-pip
-install
-torchinfo
-timm
-numba
-pip
-install
-monai == 1.3
-.0
-
-# Others
-pip
-install - r
-req.txt
+conda create -n llava_v python=3.10 -y
+conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=11.8 -c pytorch -c nvidia 
+pip install -e .
+pip install -e ".[train]"
+pip install flash-attn --no-build-isolation
+pip install open-clip-torch==2.19.0
+pip install pycocoevalcap==1.2
+pip install inflection==0.5.1
+pip install torchattacks
 ```
 
 <a name="Available-Models"/>
