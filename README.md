@@ -74,7 +74,7 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
 
 ## Quantitative Evaluation 📊
 
-We provide instructions to reproduce VideoGPT+ results on VCGBench, VCGBench-Diverse and MVBench. Please follow the instructions at eval/README.md.
+We provide instructions to reproduce Robust-LLaVA results on ___. Please follow the instructions at eval/README.md.
 
 <div align="center">
     <img src="./assets/Table1.png" alt="Robust-LLaVA Diagram" width="800">
@@ -305,61 +305,13 @@ pip install torchattacks
 
 ### Models available:
 
-1. UNet : `unet`
-2. UNETR : `unetr`
-3. Swin-UNETR : `swin_unetr`
-4. SegResNet : `segresnet`
-5. UMamba-B : `umamba_bot`
-6. UMamba-E : `umamba_enc`
 
 <a name="Training"/>
 
 ## 🚀 Training
 
 ```python
-# Training  on BTCV dataset
-python
-training.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel
-14 - -dataset
-btcv - -data_dir = < DATA_PATH > --json_list
-dataset_synapse_18_12.json
---batch_size = 3 - -max_epochs
-5000 - -optim_lr = 1e-4 - -lrschedule = warmup_cosine - -infer_overlap = 0.5 - -val_every
-15 - -save_model_dir = "./Results"
 
-# Training  on Hecktor dataset
-python
-training.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel
-3 - -dataset
-hecktor - -data_dir = < DATA_PATH > --json_list
-dataset_hecktor.json
---batch_size = 3 - -max_epochs
-500 - -optim_lr = 1e-4 - -lrschedule = warmup_cosine - -infer_overlap = 0.5 - -val_every
-15 - -save_model_dir = "./Results"
-
-# Training  on ACDC dataset
-python
-training.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel
-4 - -dataset
-acdc - -data_dir = < DATA_PATH > --json_list
-dataset_acdc_140_20_.json
---batch_size = 3 - -max_epochs
-5000 - -optim_lr = 1e-4 - -lrschedule = warmup_cosine - -infer_overlap = 0.5 - -val_every
-15 - -save_model_dir = "./Results"
-
-# Training  on Abdomen-CT dataset
-python
-training.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel
-14 - -dataset
-abdomen - -data_dir = < DATA_PATH > --json_list
-dataset_abdomen.json
---batch_size = 3 - -max_epochs
-5000 - -optim_lr = 1e-4 - -lrschedule = warmup_cosine - -infer_overlap = 0.5 - -val_every
-15 - -save_model_dir = "./Results"
 ```
 
 Follwing arguments can be passed for `--model_name`: `unet, unetr, swin_unetr, seg_resnet, umamba_bot, umamba_enc`
@@ -367,21 +319,7 @@ Follwing arguments can be passed for `--model_name`: `unet, unetr, swin_unetr, s
 To run training across all models and datasets, run the following scripts:
 
 ```python
-# Training on BTCV dataset for all models
-bash
-scripts / btcv / training.sh
 
-# Training on Hecktor dataset for all models
-bash
-scripts / hecktor / training.sh
-
-# Training on ACDC dataset for all models
-bash
-scripts / acdc / training.sh
-
-# Training on Abdomen-CT dataset for all models
-bash
-scripts / abdomen / training.sh
 ```
 
 The logs and trained models will be saved in the `Results` folder with the following structure:
@@ -395,71 +333,9 @@ The logs and trained models will be saved in the `Results` folder with the follo
 ### 1. White box Attacks
 
 ```python
-# Pixel-based PGD attack on Volumetric Segmentation models
-python
-wb_attack.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel < NUM_CLASSES > --checkpoint_path < MODEL_CKPT_PATH > --dataset < DATASET_NAME >
---data_dir = < DATA_PATH > --json_list < DATA_JSON_FILE > --attack_name
-pgd - -eps
-8 - -steps
-20
 
-# Pixel-based CosPGD attack on Volumetric Segmentation models
-python
-wb_attack.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel < NUM_CLASSES > --checkpoint_path < MODEL_CKPT_PATH > --dataset < DATASET_NAME >
---data_dir = < DATA_PATH > --json_list < DATA_JSON_FILE > --attack_name
-cospgd - -eps
-8 - -steps
-20
-
-# Pixel-based FGSM attack on Volumetric Segmentation models
-python
-wb_attack.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel < NUM_CLASSES > --checkpoint_path < MODEL_CKPT_PATH > --dataset < DATASET_NAME >
---data_dir = < DATA_PATH > --json_list < DATA_JSON_FILE > --attack_name
-fgsm - -eps
-8
-
-# Pixel-based GN attack on Volumetric Segmentation models
-python
-wb_attack.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel < NUM_CLASSES > --checkpoint_path < MODEL_CKPT_PATH > --dataset < DATASET_NAME >
---data_dir = < DATA_PATH > --json_list < DATA_JSON_FILE > --attack_name
-fgsm - -std
-8
-
-# Frequency-based VAFA attack on Volumetric Segmentation models
-python
-wb_attack.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel < NUM_CLASSES > --checkpoint_path < MODEL_CKPT_PATH > --dataset < DATASET_NAME >
---data_dir = < DATA_PATH > --json_list < DATA_JSON_FILE > --attack_name
-vafa - 3
-d - --q_max
-30 - -steps
-20 - -block_size
-32
-32
-32 - -use_ssim_loss
-True
 ```
 
-Available attacks: Fast Gradient Sign Method ([FGSM](https://arxiv.org/abs/1412.6572)), Projected Gradient
-Descent ([PGD](https://arxiv.org/abs/1706.06083)), Cosine Projected Gradient
-Descent ([CosPGD](https://arxiv.org/abs/2302.02213)), Gaussian Noise (GN), and Volumetric Adversarial Frequency
-Attack ([VAFA](https://arxiv.org/abs/2307.07269))
-
-`--eps`: Perturbation budget for Pixel-based adversarial attacks
-
-`--std`: Perturbation budget for Gaussian Noise attack
-
-`--q_max`: Maximum quantization level for VAFA attack
-
-`--block_size`: Block size for VAFA attack
-
-`--use_ssim_loss`: Use SSIM loss for VAFA attack
-
-`--steps`: Number of attack steps for iterative attacks
 
 To run the above attacks across all models and datasets, run the following scripts:
 
@@ -468,59 +344,9 @@ To run the above attacks across all models and datasets, run the following scrip
 bash
 scripts / btcv / attacks.sh
 
-# Pixel and Frequency-based attacks on Volumetric Segmentation models trained on Hecktor dataset
-bash
-scripts / hecktor / attacks.sh
-
-# Pixel and Frequency-based attacks on Volumetric Segmentation models trained on ACDC dataset
-bash
-scripts / acdc / attacks.sh
-
-# Pixel and Frequency-based attacks on Volumetric Segmentation models trained on Abdomen-CT dataset
-bash
-scripts / abdomen / attacks.sh
 ```
 
-In the above scripts replace the following arguments:
 
-`<DATA_DIR>`: Path to the dataset
-
-`<model_names>`: name of the models and their corresponding checkpoints in `<ckpt_paths>`
-
-The generated adversarial images and logs will be saved in the same folder as from where the model checkpoint was
-loaded.
-
-### 2. White box Frequency Attacks
-
-After generating adversarial examples using the above scripts, frequency analysis can be performed on them using
-Low-Pass and High-Pass filters. For evaluating the robustness of volumetric segmentation models against
-low and high frequency attacks, the following scripts can be used:
-
-```python
-# Frequency Analysis on Volumetric Segmentation models trained on BTCV dataset
-bash
-scripts / btcv / attack_freq.sh
-
-# Frequency Analysis on Volumetric Segmentation models trained on Hecktor dataset
-bash
-scripts / hecktor / attack_freq.sh
-
-# Frequency Analysis on Volumetric Segmentation models trained on ACDC dataset
-bash
-scripts / acdc / attack_freq.sh
-
-# Frequency Analysis on Volumetric Segmentation models trained on Abdomen-CT dataset
-bash
-scripts / abdomen / attack_freq.sh
-```
-
-In the above scripts replace the following arguments:
-
-`<DATA_DIR>`: Path to the dataset
-
-`<model_names>`: name of the models and their corresponding checkpoints in `<ckpt_paths>`
-
-The evaluation logs will be saved in the same folder as from where the adversarial examples were loaded.
 
 
 <a name="Robustness-against-Transfer-Based-Black-Box-Attacks"/>
@@ -533,65 +359,9 @@ To evaluate any target model on the adversarial examples, run the following scri
 
 ```python
 # Transferability on BTCV adversarial examples
-python
-inference_on_adv_images.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel
-14 - -checkpoint_path < BTCV_MODEL_CKPT_PATH > --dataset
-btcv
---data_dir = < ORIG_BTCV_DATA_PATH > --json_list
-dataset_synapse_18_12.json - -adv_imgs_dir < PATH_TO_BTCV_ADVERSARIAL_IMAGES >
 
-# Transferability on Hecktor adversarial examples
-python
-inference_on_adv_images.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel
-3 - -checkpoint_path < HECKTOR_MODEL_CKPT_PATH > --dataset
-hecktor
---data_dir = < ORIG_HECKTOR_DATA_PATH > --json_list
-dataset_hecktor.json - -adv_imgs_dir < PATH_TO_HECKTOR_ADVERSARIAL_IMAGES >
-
-# Transferability on ACDC adversarial examples
-python
-inference_on_adv_images.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel
-4 - -checkpoint_path < ACDC_MODEL_CKPT_PATH > --dataset
-acdc
---data_dir = < ORIG_ACDC_DATA_PATH > --json_list
-dataset_acdc_140_20_.json - -adv_imgs_dir < PATH_TO_ACDC_ADVERSARIAL_IMAGES >
-
-# Transferability on Abdomen-CT adversarial examples
-python
-inference_on_adv_images.py - -model_name < MODEL_NAME > --in_channels
-1 - -out_channel
-14 - -checkpoint_path < ABDOMEN_MODEL_CKPT_PATH > --dataset
-abdomen
---data_dir = < ORIG_ABDOMEN_DATA_PATH > --json_list
-dataset_abdomen.json - -adv_imgs_dir < PATH_TO_ABDOMEN_ADVERSARIAL_IMAGES >
 ```
 
-Furthermore, bash scripts are provided to evaluate transferability of adversarial examples across different models(given
-the adversarial examples are generated first across all models and datasets):
-
-```python
-# Transferability of BTCV adversarial examples across all models
-bash
-scripts / btcv / transferability.sh
-
-# Transferability of Hecktor adversarial examples across all models
-bash
-scripts / hecktor / transferability.sh
-
-# Transferability of ACDC adversarial examples across all models
-bash
-scripts / acdc / transferability.sh
-
-# Transferability of Abdomen-CT adversarial examples across all models
-bash
-scripts / abdomen / transferability.sh
-```
-
-The evaluation logs for target models will be saved in the same folder as from where the adversarial examples were
-loaded.
 
 
 
@@ -619,6 +389,6 @@ Should you have any question, please create an issue on this repository or conta
 
 ## 📚 References
 
-+ [LLaVA](https://github.com/haotian-liu/LLaVA): Our code base is build upon LLaVA and [RobustVLM](https://github.com/chs20/RobustVLM).  We thank them for open-sourcing their codebase.
++ Our code base is build upon [LLaVA](https://github.com/haotian-liu/LLaVA) and [RobustVLM](https://github.com/chs20/RobustVLM).  We thank them for open-sourcing their codebase.
 
 
