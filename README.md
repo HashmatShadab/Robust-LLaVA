@@ -115,6 +115,31 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
 
 ## Qualitative Analysis :mag:
 
+### Untargetted Attack on Image Captioning Task
+
+<div style="width:auto; height:145px; overflow:hidden;">
+  <img src="./assets/IC_U_1.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:140px; overflow:hidden;">
+  <img src="./assets/IC_U_2.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:142px; overflow:hidden;">
+  <img src="./assets/IC_U_3.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:134px; overflow:hidden;">
+  <img src="./assets/IC_U_4.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:132px; overflow:hidden;">
+  <img src="./assets/IC_U_6.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:162px; overflow:hidden;">
+  <img src="./assets/IC_U_7.png" style="width:auto; height:auto;">
+</div>
 
 ## Contents
 
