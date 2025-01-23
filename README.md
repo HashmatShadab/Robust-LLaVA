@@ -96,8 +96,8 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
     <img src="./assets/Table2.png" alt="Robust-LLaVA Diagram" width="800">
 
 <p align="justify">
-<b>On  Both <span><b><a href="https://arxiv.org/abs/2402.12336" target="_blank"
-                                         style="color: #007bff; text-decoration: underline;">FARE<sup>4</sup></a></b></span>
+Both <span><a href="https://arxiv.org/abs/2402.12336" target="_blank"
+                                         style="color: #007bff; text-decoration: underline;">FARE<sup>4</sup></a></span>
                         and <span><b><a href="https://arxiv.org/abs/2409.07353" target="_blank"
                                         style="color: #007bff; text-decoration: underline;">Sim-CLIP<sup>4</sup></a></b></span>
                         show <i>robustness</i>
@@ -119,7 +119,7 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
 
 
 <p align="justify">
-<b><b>Comparison of various <span><b>vision encoders</b></span> integrated with <b>LLaVA</b> against <b>white-box</b> (<i><a href="https://arxiv.org/abs/2306.13213" target="_blank" style="color: #007bff; text-decoration: underline;">VisualAdv</a></i>)
+<b>Comparison of various <span><b>vision encoders</b></span> integrated with <b>LLaVA</b> against <b>white-box</b> (<i><a href="https://arxiv.org/abs/2306.13213" target="_blank" style="color: #007bff; text-decoration: underline;">VisualAdv</a></i>)
 and <b>black-box</b> (<i><a href="https://arxiv.org/abs/2403.09792" target="_blank" style="color: #007bff; text-decoration: underline;">HADES</a></i>) 
 jailbreak attacks.</b> The <b>white-box results</b> (Table 3) show that <i>LLaVA with the original CLIP encoder</i> is the 
 <b>most vulnerable</b>, producing the highest number of toxic outputs. In contrast, our 
