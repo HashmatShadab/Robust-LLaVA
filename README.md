@@ -141,6 +141,33 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
   <img src="./assets/IC_U_7.png" style="width:auto; height:auto;">
 </div>
 
+
+### Targetted Attack on Image Captioning Task
+
+<div style="width:auto; height:145px; overflow:hidden;">
+  <img src="./assets/IC_T_1.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:140px; overflow:hidden;">
+  <img src="./assets/IC_T_2.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:142px; overflow:hidden;">
+  <img src="./assets/IC_T_3.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:134px; overflow:hidden;">
+  <img src="./assets/IC_T_4.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:132px; overflow:hidden;">
+  <img src="./assets/IC_T_5.png" style="width:auto; height:auto;">
+</div>
+
+<div style="width:auto; height:162px; overflow:hidden;">
+  <img src="./assets/IC_T_6.png" style="width:auto; height:auto;">
+</div>
+
 ## Contents
 
 1) [Installation](#Installation)
