@@ -194,8 +194,8 @@ demonstrating <i>superior resilience</i> across multiple adversarial scenarios.
 
 ## Training :train:
 
-We will soon release the training code and detailed instructions for pretraining, fine-tuning, and ensembling various 
-robust backbones after completing the code cleanup. If you require early access, please reach out to us, and we can 
+We will soon update the training code with detailed instructions for pretraining, fine-tuning, and ensembling various 
+robust backbones (after completing the code cleanup). If you require early access, please reach out to us, and we can 
 provide an unrefined version upon request, along with the necessary guidance for its use.
 
 ---
