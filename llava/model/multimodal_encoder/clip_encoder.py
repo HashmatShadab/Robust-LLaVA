@@ -59,28 +59,16 @@ class CLIPVisionTower(nn.Module):
 
             if load_encoder == "simclip2":
                 ckpt_path = "/mnt/nvme0n1/Dataset/muzammal/robust_llava_weights/baseline_models/simclip2.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/lustre/mlnvme/data/swasim_hpc-datasets/naseer/LLaVA_data/encoders/simclip2.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/raid/swasim/RobustLLaVA/LLaVA_data/encoders/simclip2.pt"
+
             elif load_encoder == "simclip4":
                 ckpt_path = "/mnt/nvme0n1/Dataset/muzammal/robust_llava_weights/baseline_models/simclip4.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/lustre/mlnvme/data/swasim_hpc-datasets/naseer/LLaVA_data/encoders/simclip4.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/raid/swasim/RobustLLaVA/LLaVA_data/encoders/simclip4.pt"
+
             elif load_encoder == "fare2":
                 ckpt_path = "/mnt/nvme0n1/Dataset/muzammal/robust_llava_weights/baseline_models/fare_eps_2.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/lustre/mlnvme/data/swasim_hpc-datasets/naseer/LLaVA_data/encoders/fare_eps_2.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/raid/swasim/RobustLLaVA/LLaVA_data/encoders/fare_eps_2.pt"
+
             elif load_encoder == "fare4":
                 ckpt_path = "/mnt/nvme0n1/Dataset/muzammal/robust_llava_weights/baseline_models/fare_eps_4.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/lustre/mlnvme/data/swasim_hpc-datasets/naseer/LLaVA_data/encoders/fare_eps_4.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/raid/swasim/RobustLLaVA/LLaVA_data/encoders/fare_eps_4.pt"
+
 
             if self.load_encoder == "clip224":
                 print("loading clip224")
@@ -100,40 +88,16 @@ class CLIPVisionTower(nn.Module):
             self.vision_tower = model_orig
             self.vision_tower.device = device
 
-        elif self.load_encoder in ["simclip4_336", "fare4_336", "simclip4_336_10", "fare4_336_10" ]:
+        elif self.load_encoder in ["fare4_336"]:
             import open_clip
             print("using open_clip")
             model_orig, _, image_processor = open_clip.create_model_and_transforms('ViT-L-14-336')
             vision_model = model_orig.visual
 
 
-            if load_encoder == "simclip4_336":
-                ckpt_path = "/mnt/nvme0n1/Dataset/muzammal/robust_llava_weights/baseline_models/simclip4_336.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/lustre/mlnvme/data/swasim_hpc-datasets/naseer/LLaVA_data/encoders/simclip4_336.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/raid/swasim/RobustLLaVA/LLaVA_data/encoders/simclip4_336.pt"
+            if load_encoder == "fare4_336":
+                ckpt_path = "/path/to/baseline_models/fare_eps_4_336.pt"
 
-            elif load_encoder == "fare4_336":
-                ckpt_path = "/mnt/nvme0n1/Dataset/muzammal/robust_llava_weights/baseline_models/fare_eps_4_336.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/lustre/mlnvme/data/swasim_hpc-datasets/naseer/LLaVA_data/encoders/fare_eps_4_336.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/raid/swasim/RobustLLaVA/LLaVA_data/encoders/fare_eps_4_336.pt"
-
-            elif load_encoder == "simclip4_336_10":
-                ckpt_path = "/mnt/nvme0n1/Dataset/muzammal/robust_llava_weights/baseline_models/simclip4_336_10.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/lustre/mlnvme/data/swasim_hpc-datasets/naseer/LLaVA_data/encoders/simclip4_336_10.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/raid/swasim/RobustLLaVA/LLaVA_data/encoders/simclip4_336_10.pt"
-
-            elif load_encoder == "fare4_336_10":
-                ckpt_path = "/mnt/nvme0n1/Dataset/muzammal/robust_llava_weights/baseline_models/fare_eps_4_336_10.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/lustre/mlnvme/data/swasim_hpc-datasets/naseer/LLaVA_data/encoders/fare_eps_4_336_10.pt"
-                if not os.path.exists(ckpt_path):
-                    ckpt_path = "/raid/swasim/RobustLLaVA/LLaVA_data/encoders/fare_eps_4_336_10.pt"
 
             vision_model.load_state_dict(torch.load(ckpt_path, map_location='cpu'))
             self.image_processor = CLIPImageProcessor.from_pretrained('openai/clip-vit-large-patch14-336')  # 336 openai/clip-vit-large-patch14-336
@@ -161,7 +125,7 @@ class CLIPVisionTower(nn.Module):
         self.is_loaded = True
 
     def feature_select(self, image_forward_outs):
-        if self.load_encoder in ["simclip2", "simclip4", "fare2", "fare4", "clip224", "fare4_336", "simclip4_336", "fare4_336_10", "simclip4_336_10"]:
+        if self.load_encoder in ["simclip2", "simclip4", "fare2", "fare4", "clip224", "fare4_336"]:
             image_features = image_forward_outs
         else:
             image_features = image_forward_outs.hidden_states[self.select_layer]
@@ -179,14 +143,14 @@ class CLIPVisionTower(nn.Module):
         if type(images) is list:
             image_features = []
             for image in images:
-                if self.load_encoder in ["simclip2", "simclip4", "fare2", "fare4", "clip224",  "fare4_336", "simclip4_336", "fare4_336_10", "simclip4_336_10"]:
+                if self.load_encoder in ["simclip2", "simclip4", "fare2", "fare4", "clip224",  "fare4_336"]:
                     image_forward_out = self.vision_tower(image.to(device=self.device).unsqueeze(0)).reshape(images.shape[0], -1, 1024)
                 else:
                     image_forward_out = self.vision_tower(image.to(device=self.device, dtype=self.dtype).unsqueeze(0), output_hidden_states=True)
                 image_feature = self.feature_select(image_forward_out).to(image.dtype)
                 image_features.append(image_feature)
         else:
-            if self.load_encoder in ["simclip2", "simclip4", "fare2", "fare4", "clip224", "fare4_336", "simclip4_336", "fare4_336_10", "simclip4_336_10"]:
+            if self.load_encoder in ["simclip2", "simclip4", "fare2", "fare4", "clip224", "fare4_336"]:
                 image_forward_outs = self.vision_tower(images.to(device=self.device)).reshape(images.shape[0], -1, 1024)
             else:
                 image_forward_outs = self.vision_tower(images.to(device=self.device, dtype=self.dtype), output_hidden_states=True)

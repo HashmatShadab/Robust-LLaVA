@@ -73,14 +73,7 @@ class LlavaMetaModel:
                 self.vision_tower = build_vision_tower(config, load_model="clip", delay_load=True)
                 self.mm_projector = build_vision_projector(config)
 
-            # self.vision_tower = build_vision_tower(config, load_model="clip", delay_load=True)
-            # self.mm_projector = build_vision_projector(config)
 
-            # self.dino_tower = build_vision_tower(config, load_model="dino", delay_load=True)
-            # self.dino_mm_projector = build_vision_projector(config)
-
-            # self.advxl_giant_tower = build_vision_tower(config, load_model="advxl_giant", delay_load=True)
-            # self.advxl_giant_mm_projector = build_vision_projector(config)
 
             if 'unpad' in getattr(config, 'mm_patch_merge_type', ''):
                 self.image_newline = nn.Parameter(

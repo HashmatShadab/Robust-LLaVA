@@ -38,26 +38,11 @@ class AdvXLVisionTower(nn.Module):
 
         if model_name == "advxl_giant":
             model_name = "vit_giant_patch14_224"
-            ckpt = "/mnt/nvme0n1/Dataset/muzammal/robust_llava_weights/pretrained_advxl_models/advxl/advxl_vit_g14.pth"
-            # check if the above path exists
-            if not os.path.exists(ckpt):
-                ckpt = "/mimer/NOBACKUP/groups/alvis_cvl/Fahad/adv/pretrained_models/advxl_vit_g14.pth"
-            if not os.path.exists(ckpt):
-                ckpt = "/lustre/mlnvme/data/swasim_hpc-datasets/naseer/LLaVA_data/pretrained_models/advxl_vit_g14.pth"
-            if not os.path.exists(ckpt):
-                ckpt = "/raid/swasim/RobustLLaVA/LLaVA_data/pretrained_models/advxl_vit_g14.pth"
-            # self.hidden_size_ = 1408
+            ckpt = "path/to/advxl_vit_g14.pth"
+
         elif model_name == "advxl_huge":
             model_name = "vit_huge_patch14_224"
-            ckpt = "/mnt/nvme0n1/Dataset/muzammal/robust_llava_weights/pretrained_advxl_models/advxl/advxl_vit_h14.pth"
-            # check if the above path exists
-            if not os.path.exists(ckpt):
-                ckpt = "/mimer/NOBACKUP/groups/alvis_cvl/Fahad/adv/pretrained_models/advxl_vit_h14.pth"
-            if not os.path.exists(ckpt):
-                ckpt = "/lustre/mlnvme/data/swasim_hpc-datasets/naseer/LLaVA_data/pretrained_models/advxl_vit_h14.pth"
-            if not os.path.exists(ckpt):
-                ckpt = "/raid/swasim/RobustLLaVA/LLaVA_data/pretrained_models/advxl_vit_h14.pth"
-            # self.hidden_size_ = 1280
+            ckpt = "path/to/advxl/advxl_vit_h14.pth"
         else:
             raise ValueError(f'Unexpected model name: {model_name}')
 

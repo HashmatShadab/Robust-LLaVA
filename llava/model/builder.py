@@ -248,24 +248,6 @@ def load_pretrained_model(model_path, model_base, model_name, load_8bit=False, l
 
 
 
-
-        # vision_tower = model.get_vision_tower()
-        # if not vision_tower.is_loaded:
-        #     vision_tower.load_model(device_map=device_map)
-        # if device_map != 'auto':
-        #     vision_tower.to(device=device_map, dtype=kwargs['torch_dtype'])
-
-        ############################# Adding AdvXL Encoder ##################################
-        # advxl_giant_vision_tower = model.get_advxl_giant_vision_tower()
-        # if not advxl_giant_vision_tower.is_loaded:
-        #     advxl_giant_vision_tower.load_model(device_map=device_map)
-        # if device_map != 'auto':
-        #     advxl_giant_vision_tower.to(device=device_map, dtype=kwargs['torch_dtype'])
-        # #####################################################################################
-
-
-        # image_processor = vision_tower.image_processor
-
     if hasattr(model.config, "max_sequence_length"):
         context_len = model.config.max_sequence_length
     else:
