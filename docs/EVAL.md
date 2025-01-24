@@ -218,8 +218,6 @@ To run adversarial evaluation on all the benchmarks, run the following command:
 bash bash/adv_evaluation.sh $MODEL_PATH $DATA_ROOT $GPU $ENCODER $EPSILON
 ```
 
-where `$MODEL_PATH` is the path to the model checkpoint, `$DATA_ROOT` is the path to the data directory, `$GPU` is the GPU ID, and `$ENCODER` is the encoder type. For example, to evaluate the model on all benchmarks with an epsilon of 2/255, set `$EPSILON=2`.
-
 ---
 
 ### Evaluation on Common Corruptions
