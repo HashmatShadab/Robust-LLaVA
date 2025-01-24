@@ -7,6 +7,7 @@ eps=${4:-2}
 DEVICE=${5:-1}
 EXP_NUM=${6:-1}
 
+echo "To not save adversarial examples add --dont_save_adv flag to the command"
 
 # if exp num is 1, then we will use the default model path
 if [ $EXP_NUM -eq 1 ]; then

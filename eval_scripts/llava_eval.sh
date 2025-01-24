@@ -16,10 +16,10 @@ eps=${13:-2}
 
 # echo all arguments
 echo "All arguments: $@"
+echo "To not save adversarial examples add --dont_save_adv flag to the command"
 
 # LLaVA evaluation script
-CUDA_VISIBLE_DEVICES=$DEVICE
-python -m vlm_eval.run_evaluation \
+CUDA_VISIBLE_DEVICES=$DEVICE python -m vlm_eval.run_evaluation \
 --load_encoder $load_encoder \
 --eval_flickr $flickr \
 --eval_coco $coco \
