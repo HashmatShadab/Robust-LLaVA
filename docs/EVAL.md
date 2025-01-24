@@ -188,7 +188,6 @@ To evaluate the performance of model on POPE, run the following command:
 bash bash/eval_pope.sh $DATA_ROOT $MODEL_PATH $ENCODER
 ```  
 ---
-  
 
 To run clean evaluation on all the benchmarks, run the following command:
 ```bash
