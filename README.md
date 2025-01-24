@@ -124,6 +124,8 @@ pip install torchattacks
 ➡️ **[Stage 2 Checkpoints](https://drive.google.com/drive/folders/12IrirD48wbZUagvG8BnCzf6nA12TorHp?usp=sharing)**  
 
 Previous works, such as [**FARE<sup>4</sup>**](https://drive.google.com/file/d/1NlPgbq_meSiyQMvDvhx_Vs5PkUSB1AF2/view?usp=sharing) and [**SimCLIP<sup>4</sup>**](https://drive.google.com/file/d/1TpkosUgfCzNfBJ1tsV8FJIMj6zWibscc/view?usp=sharing) are adversarially fine-tuned CLIP models for a few epochs on ImageNet and then plugged into the LLaVA framework without further training.
+For robust vision encoder used in **Robust-LLaVA<sup>4</sup><sub>H</sub>** and **Robust-LLaVA<sup>4</sup><sub>H</sub>**, download the [AdvXL](https://arxiv.org/abs/2401.04727) model weights for huge and giant model from [here](https://drive.google.com/drive/folders/1l6EftECuUk8pGwEIOodSPJIEjD7P2LuG?usp=sharing) and update the paths in this [file](llava/model/multimodal_encoder/advxl_encoder.py). Similarly,
+for  [**FARE<sup>4</sup>**](https://drive.google.com/file/d/1NlPgbq_meSiyQMvDvhx_Vs5PkUSB1AF2/view?usp=sharing) and [**SimCLIP<sup>4</sup>**](https://drive.google.com/file/d/1TpkosUgfCzNfBJ1tsV8FJIMj6zWibscc/view?usp=sharing) checkpoints, update paths in this [file](llava/model/multimodal_encoder/clip_encoder.py).
 
 
 ## Quantitative Evaluation 📊
