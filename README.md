@@ -190,6 +190,22 @@ jailbreak attacks.</b> The <b>white-box results</b> (Table 3) show that <i>LLaVA
 demonstrating <i>superior resilience</i> across multiple adversarial scenarios.
 </p>
 
+
+<div align="center">
+    <img src="./assets/Table14.png" alt="Robust-LLaVA Diagram" width="800">
+</div>
+
+
+<p align="justify">
+ Evaluation of <b>vision encoder ensembles</b> within the <b>MLLM framework</b>; assessing their
+                        <b>robustness</b> across multiple benchmarks.
+                        Our analysis reveals that an ensemble’s robustness is <i>limited by its weakest vision
+                        encoder</i>. Across all configurations, we observe that the <b>most vulnerable component</b> dictates the
+                        overall robustness,
+                        highlighting the <b>importance</b> of coming up with approaches to <i>strengthen
+                        ensemble resilience</i>.
+</p>
+
 ---
 
 ## Training :train:
