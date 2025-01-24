@@ -65,6 +65,19 @@ in the original [LLaVA](https://github.com/haotian-liu/LLaVA) codebase, but for 
 ## Evaluation
 
 ---
+First download the instruction tuned model checkpoints from Model Zoo as mentioned in the [README](../README.md). In the below scripts:
+
+- **`$DATA_ROOT`**: Path to the root directory of the evaluation data.
+- **`$MODEL_PATH`**: Path to the model checkpoint.
+- **`$ENCODER`**:
+  - Set to `'simclip4'` when using the **adversarially finetuned CLIP model from SimCLIP-4**, replacing the original CLIP model in the LLaVA framework.
+  - Set to `'fare4'` when using the **adversarially finetuned CLIP model from FARE-4**, replacing the original CLIP model in the LLaVA framework.
+  - Set to `'none'` for all other cases.
+- **`$GPU`**: ID of the GPU to be used.
+- **`$EPSILON`**: Perturbation budget for adversarial evaluation.
+  - For example, to evaluate on a perturbation budget of **2/255**, set `$EPSILON=2`.
+
+    
 ### Flickr30k
 To evaluate the adversarial performance(APGD-Ensemble Attack) of model on Flickr, run the following command:
 ```bash
@@ -76,7 +89,6 @@ To evaluate the adversarial performance(APGD Attack) of model on Flickr, run the
 ```bash
 bash bash/llava_eval.sh $DATA_ROOT $MODEL_PATH $ENCODER $GPU true false false false false false false apgd $EPSILON
 ```
-where `$EPSILON` is the perturbation budget for adversarial evaluation. For example, to evaluate the model on Flickr with an epsilon of 2/255, set `$EPSILON=2`.
 
 To evaluate the clean performance of model on Flickr, run the following command:
 ```bash
