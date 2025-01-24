@@ -263,8 +263,8 @@ def get_args():
 
     # Task Data Parameters
     parser.add_argument("--task", default="vizwiz", type=str, choices=["coco", "vqav2", "okvqa", "vizwiz"], help="the task name")
-    parser.add_argument("--data_path", default=r"F:\Code\datasets\VLM_datasets\LLaVA\eval_benchmark\vizwiz\val", type=str, help='path of the clean images')
-    parser.add_argument("--json_data_path", default=r"F:\Code\datasets\VLM_datasets\LLaVA\eval_benchmark\vizwiz\val_questions_vqa_format.json", type=str)
+    parser.add_argument("--data_path", default=r".\eval_benchmark\vizwiz\val", type=str, help='path of the clean images')
+    parser.add_argument("--json_data_path", default=r".\eval_benchmark\vizwiz\val_questions_vqa_format.json", type=str)
 
     # Logging Parameters
     parser.add_argument("--save_path", default=r"vizwiz_corrupted", type=str, help='the folder name of output')
