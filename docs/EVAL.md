@@ -202,3 +202,12 @@ bash bash/adv_evaluation.sh $MODEL_PATH $DATA_ROOT $GPU $ENCODER $EPSILON
 where `$MODEL_PATH` is the path to the model checkpoint, `$DATA_ROOT` is the path to the data directory, `$GPU` is the GPU ID, and `$ENCODER` is the encoder type. For example, to evaluate the model on all benchmarks with an epsilon of 2/255, set `$EPSILON=2`.
 
 ---
+
+### Evaluation on Common Corruptions
+For generating common corruptions on COCO, VQAv2, OKVQA, and VizWiz, you can run the python file [corruptions.py](../corruptions/corruptions.py) to generate different 
+corrupted version of the benchmark at different levels of severity and save them. You can then evaluate the model on these corrupted versions using the following command:
+
+```bash
+bash bash/corruption_evaluation.sh $MODEL_PATH $DATA_ROOT $GPU $ENCODER
+```
+
