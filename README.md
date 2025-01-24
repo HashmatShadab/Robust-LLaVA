@@ -75,7 +75,7 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
 
 ## 💿 Installation
 
-You can follow the instructions mention in the [LLaVA](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install)
+You can follow the instructions mentioned in the [LLaVA](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install)
 codebase to install the required dependencies or follow the below steps:
 
 1. Clone the repository:
