@@ -253,17 +253,6 @@ We provide scripts for pretraining and finetuning of VideoGPT+. Please follow th
 
 
 
-## Contents
-
-1) [Installation](#Installation)
-2) [Available Models](#Available-Models)
-3) [Training](#Training)
-4) [Robustness against White-Box Attacks](#Robustness-against-White-Box-Attacks)
-5) [Robustness against Transfer-Based Black-Box Attacks](#Robustness-against-Transfer-Based-Black-Box-Attacks)
-6) [BibTeX](#bibtex)
-7) [Contact](#contact)
-8) [References](#references)
-
 <hr>
 <hr>
 
@@ -303,20 +292,26 @@ pip install torchattacks
 
 ## 🏁 Model Zoo
 
-We provide the following adversarially fine-tuned ViT-L/14 CLIP models (approx. 1.1 GB each):
 
-| Model                                | Link                                                                                           |
-|--------------------------------------|------------------------------------------------------------------------------------------------|
-| CLIP                                 | [Link]() |
-| FARE<sup>4</sup>                     | [Link]() |
-| SimCLIP<sup>4</sup>                  | [Link]() |
-| Robust-LLaVA<sup>4</sup><sub>H</sub> | [Link]() |
-| Robust-LLaVA<sup>4</sup><sub>G</sub> | [Link]() |
+| Model                                                                       | Stage 1: Feature Alignment | Stage 2: Instruction Tuning |
+|-----------------------------------------------------------------------------|:--------------------------:|:---------------------------:|
+| **CLIP**                                                                    | [Link](https://drive.google.com/drive/folders/1wqlYhqDJT-Zda2RWMd1rj7zHTeP5qO6P?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1tpMlZx0cI0hbzHo1iDJrvDc9Y_MXsexp?usp=sharing)                   |
+| **Robust-LLaVA<sup>4</sup><sub>H</sub>**                                    | [Link](https://drive.google.com/drive/folders/1eGigj2-5m5Sqkt5ITNVtGsqliUFUH9XE?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1o2i0CBu5jKC6pvB9O_lUBgLZBp-nUBGW?usp=sharing)                   |
+| **Robust-LLaVA<sup>4</sup><sub>G</sub>**                                    | [Link](https://drive.google.com/drive/folders/1NSH7AfnpajaPZr1ok_z-I14_3uc4Fo8w?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1F3lJYzOlZxy4WT5-rult6wmdtplYqdK7?usp=sharing)                   |
+| **Robust-LLaVA<sup>4</sup><sub>H</sub> + CLIP**                             | [Link](https://drive.google.com/drive/folders/1Tqp92zKgEMQR_lMZEZjurnT53AN2f3Eg?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1so-El_Me5wDLP0Nca77V0Aq7Efi0h7wO?usp=sharing)                   |
+| **Robust-LLaVA<sup>4</sup><sub>G</sub> + CLIP**                             | [Link](https://drive.google.com/drive/folders/1O-pmfHBXQGVB5ypvVb1HIBQrMkI7w63l?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1ZTsMnxUhXr_L7gQBFB2UXz2A_t-kfdnp?usp=sharing)                   |
+| **Robust-LLaVA<sup>4</sup><sub>H</sub> + Robust-LLaVA<sup>4</sup><sub>G</sub>** | [Link](https://drive.google.com/drive/folders/1NSH7AfnpajaPZr1ok_z-I14_3uc4Fo8w?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1yyYPuEizcGpDnL2rDhhKqLYd0pokKN1d?usp=sharing)                   |
+| **ViT-B/16** (Adversarially trained on ImageNet-1k)                         | [Link](https://drive.google.com/drive/folders/1l27hnjFof0ORDQe8W57RTsrG1LixTiqb?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1ZFc3oZRY5NKVOPVa7YgTjGbakYbdq1s6?usp=sharing)                   |
+| **ViT-L/14** (Naturally trained on ImageNet-21k + ImageNet-1k)              | [Link](https://drive.google.com/drive/folders/1jmcE-8ElhhZhLPH0sbb5ZSFkJLXvXPJL?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1PFTIM94a_SybCGjg3_OeXgb51z4UNqJ6?usp=sharing)                   |
 
-The models are also available on [HuggingFace]().
 
-FARE<sup>4</sup> and SimCLIP<sup>4</sup>  models are adversarially fine-tuned for few epochs on ImageNet and then plugged into the LLaVA
-framework without further training.
+#### 🔗 All checkpoints for **Stage 1 (Feature Alignment)** and **Stage 2 (Instruction Tuning)** are available at:
+➡️ **[Stage 1 Checkpoints](https://drive.google.com/drive/folders/1oep7Nk-x4syoOjBoB_LQbWNZ1lEJPqgW?usp=sharing)**  
+➡️ **[Stage 2 Checkpoints](https://drive.google.com/drive/folders/12IrirD48wbZUagvG8BnCzf6nA12TorHp?usp=sharing)**  
+
+Previous works, such as [**FARE<sup>4</sup>**](https://drive.google.com/file/d/1NlPgbq_meSiyQMvDvhx_Vs5PkUSB1AF2/view?usp=sharing) and [**SimCLIP<sup>4</sup>**](https://drive.google.com/file/d/1TpkosUgfCzNfBJ1tsV8FJIMj6zWibscc/view?usp=sharing) are adversarially fine-tuned CLIP models for a few epochs on ImageNet and then plugged into the LLaVA framework without further training.
+
+
 <a name="Training"/>
 
 ## 🚀 Training
