@@ -69,13 +69,32 @@ First download the instruction tuned model checkpoints from Model Zoo as mention
 
 - **`$DATA_ROOT`**: Path to the root directory of the evaluation data.
 - **`$MODEL_PATH`**: Path to the model checkpoint.
-- **`$ENCODER`**:
-  - Set to `'simclip4'` when using the **adversarially finetuned CLIP model from SimCLIP-4**, replacing the original CLIP model in the LLaVA framework.
-  - Set to `'fare4'` when using the **adversarially finetuned CLIP model from FARE-4**, replacing the original CLIP model in the LLaVA framework.
-  - Set to `'none'` for all other cases.
 - **`$GPU`**: ID of the GPU to be used.
 - **`$EPSILON`**: Perturbation budget for adversarial evaluation.
   - For example, to evaluate on a perturbation budget of **2/255**, set `$EPSILON=2`.
+- **`$ENCODER`**:
+  - Will be changed when using the **adversarially finetuned CLIP model from [SimCLIP](https://arxiv.org/abs/2407.14971)**, replacing the original CLIP model in the LLaVA framework.
+  - Will be changed when using the **adversarially finetuned CLIP model from [FARE](https://arxiv.org/abs/2402.12336)**, replacing the original CLIP model in the LLaVA framework.
+  - Set to `'none'` for all other cases.
+
+
+| **LLaVA Model**                                                                  | **Encoder**  |
+|----------------------------------------------------------------------------------|:------------:|
+| **CLIP**                                                                         |     none     |
+| **CLIP@224**                                                                     |   clip224    |
+| **FARE4@224**                                                                    |    fare4     |
+| **FARE4@336**                                                                    |  fare4_336   |
+| **Robust-LLaVA<sup>4</sup><sub>H</sub>**                                         |     none     | 
+| **Robust-LLaVA<sup>4</sup><sub>G</sub>**                                         |     none     |
+| **Robust-LLaVA<sup>4</sup><sub>H</sub> + CLIP**                                  |     none     |
+| **Robust-LLaVA<sup>4</sup><sub>G</sub> + CLIP**                                  |     none     |
+| **Robust-LLaVA<sup>4</sup><sub>H</sub> + FARE4@336**                             |  fare4_336   |
+| **Robust-LLaVA<sup>4</sup><sub>G</sub> + FARE4@336**                             |  fare4_336   |
+| **Robust-LLaVA<sup>4</sup><sub>H</sub> + Robust-LLaVA<sup>4</sup><sub>G</sub>**  |     none     |
+| **ViT-B/16** (Adversarially trained on ImageNet-1k)                              |     none     | 
+| **ViT-L/14** (Naturally trained on ImageNet-21k + ImageNet-1k)                   |     none     | 
+
+
 ---
     
 ### Flickr30k
