@@ -74,7 +74,7 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
 
 ## Quantitative Evaluation 📊
 
-We provide instructions to reproduce Robust-LLaVA results on ___. Please follow the instructions at eval/README.md.
+We provide detailed instructions for reproducing Robust-LLaVA results on both untargeted and targeted attacks across various image captioning and visual question answering benchmarks. Please refer to [**docs/EVAL.md**](./docs/EVAL.md) for the step-by-step guide.
 
 <div align="center">
     <img src="./assets/Table1.png" alt="Robust-LLaVA Diagram" width="800">
@@ -137,8 +137,9 @@ demonstrating <i>superior resilience</i> across multiple adversarial scenarios.
 ---
 
 ## Training :train:
-We provide scripts for pretraining and finetuning of VideoGPT+. Please follow the instructions at [scripts/README.md](scripts/README.md).
-
+We will soon release the training code and detailed instructions for pretraining, fine-tuning, and ensembling various 
+robust backbones after completing the code cleanup. If you require early access, please reach out to us, and we can 
+provide an unrefined version upon request, along with the necessary guidance for its use.
 ---
 
 
