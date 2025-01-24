@@ -316,49 +316,6 @@ provide an unrefined version upon request, along with the necessary guidance for
 
 
 
-
-
-<a name="Robustness-against-White-Box-Attacks"/>
-
-## 🛡️ Robustness against White-Box Attacks
-
-### 1. White box Attacks
-
-```python
-
-```
-
-
-To run the above attacks across all models and datasets, run the following scripts:
-
-```python
-# Pixel and Frequency-based attacks on Volumetric Segmentation models trained on BTCV dataset
-bash
-scripts / btcv / attacks.sh
-
-```
-
-
-
-
-<a name="Robustness-against-Transfer-Based-Black-Box-Attacks"/>
-
-## 🛡️ Robustness against Transfer-Based Black-Box Attacks
-
-After generating adversarial examples using a surrogate model, the transferability of adversarial examples can be
-reported by evaluating them on unseen target models trained on the same dataset.
-To evaluate any target model on the adversarial examples, run the following script:
-
-```python
-# Transferability on BTCV adversarial examples
-
-```
-
-
-
-
-
-
 <a name="bibtex"/>
 
 ## 📜 BibTeX
@@ -368,6 +325,10 @@ To evaluate any target model on the adversarial examples, run the following scri
 ```
 
 <hr />
+
+
+## License :scroll:
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 <a name="contact"/>
 
