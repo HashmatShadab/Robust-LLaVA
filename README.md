@@ -71,6 +71,60 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
 
 </div>
 
+<a name="Installation"/>
+
+## 💿 Installation
+
+You can follow the instructions mention in the [LLaVA](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install)
+codebase to install the required dependencies or follow the below steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/HashmatShadab/Robust-LLaVA 
+cd Robust-LLaVA
+```
+
+2. Install the required dependencies:
+
+```python
+conda create -n llava_v python=3.10 -y
+conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=11.8 -c pytorch -c nvidia 
+pip install -e .
+pip install -e ".[train]"
+pip install flash-attn --no-build-isolation
+
+pip install open-clip-torch==2.19.0
+pip install pycocoevalcap==1.2
+pip install inflection==0.5.1
+pip install torchattacks
+
+```
+
+
+<a name="Available-Models"/>
+
+## 🏁 Model Zoo
+
+
+| Model                                                                       | Stage 1: Feature Alignment | Stage 2: Instruction Tuning |
+|-----------------------------------------------------------------------------|:--------------------------:|:---------------------------:|
+| **CLIP**                                                                    | [Link](https://drive.google.com/drive/folders/1wqlYhqDJT-Zda2RWMd1rj7zHTeP5qO6P?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1tpMlZx0cI0hbzHo1iDJrvDc9Y_MXsexp?usp=sharing)                   |
+| **Robust-LLaVA<sup>4</sup><sub>H</sub>**                                    | [Link](https://drive.google.com/drive/folders/1eGigj2-5m5Sqkt5ITNVtGsqliUFUH9XE?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1o2i0CBu5jKC6pvB9O_lUBgLZBp-nUBGW?usp=sharing)                   |
+| **Robust-LLaVA<sup>4</sup><sub>G</sub>**                                    | [Link](https://drive.google.com/drive/folders/1NSH7AfnpajaPZr1ok_z-I14_3uc4Fo8w?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1F3lJYzOlZxy4WT5-rult6wmdtplYqdK7?usp=sharing)                   |
+| **Robust-LLaVA<sup>4</sup><sub>H</sub> + CLIP**                             | [Link](https://drive.google.com/drive/folders/1Tqp92zKgEMQR_lMZEZjurnT53AN2f3Eg?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1so-El_Me5wDLP0Nca77V0Aq7Efi0h7wO?usp=sharing)                   |
+| **Robust-LLaVA<sup>4</sup><sub>G</sub> + CLIP**                             | [Link](https://drive.google.com/drive/folders/1O-pmfHBXQGVB5ypvVb1HIBQrMkI7w63l?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1ZTsMnxUhXr_L7gQBFB2UXz2A_t-kfdnp?usp=sharing)                   |
+| **Robust-LLaVA<sup>4</sup><sub>H</sub> + Robust-LLaVA<sup>4</sup><sub>G</sub>** | [Link](https://drive.google.com/drive/folders/1NSH7AfnpajaPZr1ok_z-I14_3uc4Fo8w?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1yyYPuEizcGpDnL2rDhhKqLYd0pokKN1d?usp=sharing)                   |
+| **ViT-B/16** (Adversarially trained on ImageNet-1k)                         | [Link](https://drive.google.com/drive/folders/1l27hnjFof0ORDQe8W57RTsrG1LixTiqb?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1ZFc3oZRY5NKVOPVa7YgTjGbakYbdq1s6?usp=sharing)                   |
+| **ViT-L/14** (Naturally trained on ImageNet-21k + ImageNet-1k)              | [Link](https://drive.google.com/drive/folders/1jmcE-8ElhhZhLPH0sbb5ZSFkJLXvXPJL?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1PFTIM94a_SybCGjg3_OeXgb51z4UNqJ6?usp=sharing)                   |
+
+
+#### 🔗 All checkpoints for **Stage 1 (Feature Alignment)** and **Stage 2 (Instruction Tuning)** are available at:
+➡️ **[Stage 1 Checkpoints](https://drive.google.com/drive/folders/1oep7Nk-x4syoOjBoB_LQbWNZ1lEJPqgW?usp=sharing)**  
+➡️ **[Stage 2 Checkpoints](https://drive.google.com/drive/folders/12IrirD48wbZUagvG8BnCzf6nA12TorHp?usp=sharing)**  
+
+Previous works, such as [**FARE<sup>4</sup>**](https://drive.google.com/file/d/1NlPgbq_meSiyQMvDvhx_Vs5PkUSB1AF2/view?usp=sharing) and [**SimCLIP<sup>4</sup>**](https://drive.google.com/file/d/1TpkosUgfCzNfBJ1tsV8FJIMj6zWibscc/view?usp=sharing) are adversarially fine-tuned CLIP models for a few epochs on ImageNet and then plugged into the LLaVA framework without further training.
+
 
 ## Quantitative Evaluation 📊
 
@@ -137,9 +191,11 @@ demonstrating <i>superior resilience</i> across multiple adversarial scenarios.
 ---
 
 ## Training :train:
+
 We will soon release the training code and detailed instructions for pretraining, fine-tuning, and ensembling various 
 robust backbones after completing the code cleanup. If you require early access, please reach out to us, and we can 
 provide an unrefined version upon request, along with the necessary guidance for its use.
+
 ---
 
 
@@ -255,82 +311,11 @@ provide an unrefined version upon request, along with the necessary guidance for
 
 
 <hr>
-<hr>
 
 
 
-<a name="Installation"/>
-
-## 💿 Installation
-
-You can follow the instrcutions mention in the [LLaVA](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install)
-codebase to install the required dependencies or follow the below steps:
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/HashmatShadab/Robust-LLaVA 
-cd Robust-LLaVA
-```
-
-2. Install the required dependencies:
-
-```python
-conda create -n llava_v python=3.10 -y
-conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=11.8 -c pytorch -c nvidia 
-pip install -e .
-pip install -e ".[train]"
-pip install flash-attn --no-build-isolation
-
-pip install open-clip-torch==2.19.0
-pip install pycocoevalcap==1.2
-pip install inflection==0.5.1
-pip install torchattacks
-
-```
-
-<a name="Available-Models"/>
-
-## 🏁 Model Zoo
 
 
-| Model                                                                       | Stage 1: Feature Alignment | Stage 2: Instruction Tuning |
-|-----------------------------------------------------------------------------|:--------------------------:|:---------------------------:|
-| **CLIP**                                                                    | [Link](https://drive.google.com/drive/folders/1wqlYhqDJT-Zda2RWMd1rj7zHTeP5qO6P?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1tpMlZx0cI0hbzHo1iDJrvDc9Y_MXsexp?usp=sharing)                   |
-| **Robust-LLaVA<sup>4</sup><sub>H</sub>**                                    | [Link](https://drive.google.com/drive/folders/1eGigj2-5m5Sqkt5ITNVtGsqliUFUH9XE?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1o2i0CBu5jKC6pvB9O_lUBgLZBp-nUBGW?usp=sharing)                   |
-| **Robust-LLaVA<sup>4</sup><sub>G</sub>**                                    | [Link](https://drive.google.com/drive/folders/1NSH7AfnpajaPZr1ok_z-I14_3uc4Fo8w?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1F3lJYzOlZxy4WT5-rult6wmdtplYqdK7?usp=sharing)                   |
-| **Robust-LLaVA<sup>4</sup><sub>H</sub> + CLIP**                             | [Link](https://drive.google.com/drive/folders/1Tqp92zKgEMQR_lMZEZjurnT53AN2f3Eg?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1so-El_Me5wDLP0Nca77V0Aq7Efi0h7wO?usp=sharing)                   |
-| **Robust-LLaVA<sup>4</sup><sub>G</sub> + CLIP**                             | [Link](https://drive.google.com/drive/folders/1O-pmfHBXQGVB5ypvVb1HIBQrMkI7w63l?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1ZTsMnxUhXr_L7gQBFB2UXz2A_t-kfdnp?usp=sharing)                   |
-| **Robust-LLaVA<sup>4</sup><sub>H</sub> + Robust-LLaVA<sup>4</sup><sub>G</sub>** | [Link](https://drive.google.com/drive/folders/1NSH7AfnpajaPZr1ok_z-I14_3uc4Fo8w?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1yyYPuEizcGpDnL2rDhhKqLYd0pokKN1d?usp=sharing)                   |
-| **ViT-B/16** (Adversarially trained on ImageNet-1k)                         | [Link](https://drive.google.com/drive/folders/1l27hnjFof0ORDQe8W57RTsrG1LixTiqb?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1ZFc3oZRY5NKVOPVa7YgTjGbakYbdq1s6?usp=sharing)                   |
-| **ViT-L/14** (Naturally trained on ImageNet-21k + ImageNet-1k)              | [Link](https://drive.google.com/drive/folders/1jmcE-8ElhhZhLPH0sbb5ZSFkJLXvXPJL?usp=sharing)                   | [Link](https://drive.google.com/drive/folders/1PFTIM94a_SybCGjg3_OeXgb51z4UNqJ6?usp=sharing)                   |
-
-
-#### 🔗 All checkpoints for **Stage 1 (Feature Alignment)** and **Stage 2 (Instruction Tuning)** are available at:
-➡️ **[Stage 1 Checkpoints](https://drive.google.com/drive/folders/1oep7Nk-x4syoOjBoB_LQbWNZ1lEJPqgW?usp=sharing)**  
-➡️ **[Stage 2 Checkpoints](https://drive.google.com/drive/folders/12IrirD48wbZUagvG8BnCzf6nA12TorHp?usp=sharing)**  
-
-Previous works, such as [**FARE<sup>4</sup>**](https://drive.google.com/file/d/1NlPgbq_meSiyQMvDvhx_Vs5PkUSB1AF2/view?usp=sharing) and [**SimCLIP<sup>4</sup>**](https://drive.google.com/file/d/1TpkosUgfCzNfBJ1tsV8FJIMj6zWibscc/view?usp=sharing) are adversarially fine-tuned CLIP models for a few epochs on ImageNet and then plugged into the LLaVA framework without further training.
-
-
-<a name="Training"/>
-
-## 🚀 Training
-
-```python
-
-```
-
-Follwing arguments can be passed for `--model_name`: `unet, unetr, swin_unetr, seg_resnet, umamba_bot, umamba_enc`
-
-To run training across all models and datasets, run the following scripts:
-
-```python
-
-```
-
-The logs and trained models will be saved in the `Results` folder with the following structure:
-`Results/{model_name}/data_{dataset_name}/natural/`
 
 
 <a name="Robustness-against-White-Box-Attacks"/>
