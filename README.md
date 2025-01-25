@@ -393,6 +393,6 @@ Should you have any question, please create an issue on this repository or conta
 
 ## References 📖
 
-+ Our code base is build upon [LLaVA](https://github.com/haotian-liu/LLaVA) and [RobustVLM](https://github.com/chs20/RobustVLM).  We thank them for open-sourcing their codebase.
++ Our codebase is build upon [LLaVA](https://github.com/haotian-liu/LLaVA) and [RobustVLM](https://github.com/chs20/RobustVLM).  We thank them for open-sourcing their codebase.
 
 
