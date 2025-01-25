@@ -372,7 +372,7 @@ provide an unrefined version upon request, along with the necessary guidance for
 
 <a name="bibtex"/>
 
-## 📜 BibTeX
+##  BibTeX 📜
 
 ```bibtex
 
@@ -383,7 +383,7 @@ provide an unrefined version upon request, along with the necessary guidance for
 
 <a name="contact"/>
 
-## 📧 Contact
+##  Contact 📧
 
 Should you have any question, please create an issue on this repository or contact at hashmat.malik@mbzuai.ac.ae
 
@@ -391,7 +391,7 @@ Should you have any question, please create an issue on this repository or conta
 
 <a name="references"/>
 
-## 📚 References
+## References 📖
 
 + Our code base is build upon [LLaVA](https://github.com/haotian-liu/LLaVA) and [RobustVLM](https://github.com/chs20/RobustVLM).  We thank them for open-sourcing their codebase.
 
