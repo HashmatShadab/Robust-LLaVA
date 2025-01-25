@@ -106,7 +106,7 @@ creates a <b>semantic alignment gap</b>, impairing MLLMs' ability to perform <i>
 
 <a name="Installation"/>
 
-## 💿 Installation
+##  Installation 💿
 
 You can follow the instructions mentioned in the [LLaVA](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install)
 codebase to install the required dependencies or follow the below steps:
@@ -139,7 +139,7 @@ pip install torchattacks
 
 <a name="Available-Models"/>
 
-## 🏁 Model Zoo
+## Model Zoo 🧠
 
 
 | Model                                                                       | Stage 1: Feature Alignment | Stage 2: Instruction Tuning |
