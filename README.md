@@ -74,7 +74,7 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
 ---
 
 
-<div align="center">
+<div align="center" style="background-color: #393039; padding: 20px; border-radius: 5px;">
     <img src="./assets/alog_align.png" alt="Robust-LLaVA Diagram" width="800">
 <p align="justify">
 Current multi-modal large language models (MLLMs) struggle to achieve <b>high adversarial robustness</b> while maintaining strong
@@ -96,12 +96,13 @@ in order to assess their robust multimodal alignment.
 ResNet-101) suffer <b>significant robustness degradation</b> post-alignment, with accuracy dropping <i>below 60%</i> across
 all datasets.In contrast, <b>large-scale models</b> (ViT-H and ViT-G) successfully <b>retain their robustness</b> while acquiring
 <i>robust zero-shot capabilities</i>. Leveraging this insight, we integrate these robust encoders into the <b>LLaVA framework</b>,
-achieving <b>strong adversarial robustness</b> and <b>semantic alignment</b> in MLLMs <i>without additional specialized adversarial training</i>.
+achieving  <b>strong adversarial robustness</b> and <b>semantic alignment</b> in MLLMs <i>without additional specialized adversarial training</i>.
 </p>
+
+
 </div>
 
 ---
-
 
 
 <a name="Installation"/>
