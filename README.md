@@ -71,6 +71,30 @@ in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>mainta
 
 </div>
 
+<div align="center">
+    <img src="./assets/alog_align.png" alt="Robust-LLaVA Diagram" width="800">
+<p align="justify">
+Current multi-modal large language models (MLLMs) struggle to achieve <b>high adversarial robustness</b> while maintaining strong
+<b>vision-language reasoning</b>. Methods such as <b>TeCoA</b>, <b>FARE</b>, and <b>SimCLIP</b> perform constrained adversarial
+fine-tuning of CLIP to <i>preserve the generalization capabilities</i> of the pre-trained model. However, this limited adversarial training results in only <b>modest robustness gains</b> when the model is integrated into an
+MLLM framework. Moreover, the misalignment between adversarial CLIP training objectives and MLLMs' <b>generative understanding</b>
+creates a <b>semantic alignment gap</b>, impairing MLLMs' ability to perform <i>complex visual reasoning</i>. This leads us to explore whether current <b>large-scale adversarially pre-trained vision encoders</b>, which contain
+<i>rich robust representations</i>, can exhibit <b>strong semantic alignment</b> within the MLLM framework.
+<b><span style="color: blue;">Left:</span></b> We investigate the <b>multimodal alignment of robust encoders</b> by aligning
+the feature space of robust encoders using a <b>linear layer</b> with the pre-trained CLIP model, which has a strong multimodal
+feature representation. We then align robust encoders with CLIP’s text encoder to evaluate <b>robust zero-shot performance</b>,
+in order to assess their robust multimodal alignment.
+<b><span style="color: blue;">Right:</span></b> The results demonstrate a <b>strong correlation</b> between <b>model scale</b>,
+<b>training strategy</b>, and <b>robustness preservation</b> during CLIP alignment. <i>Small-scale models</i> (e.g., ViT-B and
+ResNet-101) suffer <b>significant robustness degradation</b> post-alignment, with accuracy dropping <i>below 60%</i> across
+all datasets.In contrast, <b>large-scale models</b> (ViT-H and ViT-G) successfully <b>retain their robustness</b> while acquiring
+<i>robust zero-shot capabilities</i>. Leveraging this insight, we integrate these robust encoders into the <b>LLaVA framework</b>,
+achieving <b>strong adversarial robustness</b> and <b>semantic alignment</b> in MLLMs <i>without additional specialized adversarial training</i>.
+</p>
+</div>
+
+
+
 <a name="Installation"/>
 
 ## 💿 Installation
