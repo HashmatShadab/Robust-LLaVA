@@ -6,7 +6,7 @@ clean examples, as done in the original [LLaVA](https://github.com/haotian-liu/L
 Before preparing task-specific data, **you MUST first download [eval.zip](https://drive.google.com/file/d/1atZSBBrAX54yYpxtVVW33zFvcnaHeFPy/view?usp=sharing)**. It contains custom annotations, scripts, and the prediction files with LLaVA v1.5. Extract to `./playground/data/eval`. This also provides a general structure for all datasets.
 
 ### Data Structure
-The data for evaluation can be stored in the `eval_benchmark` directory. The structure of the  directory will be as follows:
+The data for evaluation can be stored in the `$DATA_ROOT` directory. The structure of the  directory will be as follows:
 ```
 $DATA_ROOT
 ├── coco
@@ -78,7 +78,7 @@ First download the instruction tuned model checkpoints from Model Zoo as mention
   - Set to `'none'` for all other cases.
 
 
-| **LLaVA Model**                                                                  | **Encoder**  |
+| **LLaVA Model**                                                                  | **$Encoder** |
 |----------------------------------------------------------------------------------|:------------:|
 | **CLIP**                                                                         |     none     |
 | **CLIP@224**                                                                     |   clip224    |
