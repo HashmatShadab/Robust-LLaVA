@@ -87,6 +87,9 @@ creates a <b>semantic alignment gap</b>, impairing MLLMs' ability to perform <i>
 <i>rich robust representations</i>, can exhibit <b>strong semantic alignment</b> within the MLLM framework.
 </p>
 
+</div>
+
+
 <div style="text-align: justify;">
 
 > <b><span style="color: blue;">Left:</span></b> We investigate the <b>multimodal alignment of robust encoders</b> by aligning
@@ -108,7 +111,6 @@ creates a <b>semantic alignment gap</b>, impairing MLLMs' ability to perform <i>
 </div>
 
 
-</div>
 
 ---
 
