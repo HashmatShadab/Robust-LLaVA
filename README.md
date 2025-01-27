@@ -46,9 +46,8 @@ in <b>robustness score across all tasks and diverse datasets</b>, while <i>maint
 </p>
 </div>
 
-<div style="text-align: justify;">
 
-> **Abstract:** Multi-modal Large Language Models (MLLMs) have demonstrated impressive capabilities in vision-language
+> **<p align="justify"> Abstract:** *Multi-modal Large Language Models (MLLMs) have demonstrated impressive capabilities in vision-language
 > tasks, but their reliance on visual processing introduces critical security vulnerabilities. Their vision encoders
 > remain susceptible to adversarial perturbations that can induce hallucinations, manipulate responses, or bypass safety
 > mechanisms while maintaining coherent language generation. Current approaches attempt to address this by adversarially
@@ -68,9 +67,8 @@ in <b>robustness score across all tasks and diverse datasets</b>, while <i>maint
 > clean
 > performance. Our framework achieves 2× and 1.5× average robustness gains in captioning and VQA tasks, respectively,
 > and
-> delivers over 10% improvement against advanced jailbreaking attacks compared to state-of-the-art methods.
+> delivers over 10% improvement against advanced jailbreaking attacks compared to state-of-the-art methods.* </p>
 
-</div>
 
 ---
 
