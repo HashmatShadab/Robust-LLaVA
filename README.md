@@ -128,7 +128,8 @@ cd Robust-LLaVA
 2. Install the required dependencies:
 
 ```python
-conda create -n llava_v python=3.10 -y
+conda create -n robust_llava python=3.10 -y
+conda activate robust_llava
 conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=11.8 -c pytorch -c nvidia 
 pip install -e .
 pip install -e ".[train]"
