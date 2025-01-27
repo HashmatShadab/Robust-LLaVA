@@ -88,22 +88,22 @@ creates a <b>semantic alignment gap</b>, impairing MLLMs' ability to perform <i>
 </div>
 
 
-<blockquote style="margin-left: 20px; border-left: 4px solid blue; padding-left: 10px;">
-    <b><span style="color: blue;">Left:</span></b> We investigate the <b>multimodal alignment of robust encoders</b> by aligning
-    the feature space of robust encoders using a <b>linear layer</b> with the pre-trained CLIP model, which has a strong multimodal
-    feature representation. We then align robust encoders with CLIP’s text encoder to evaluate <b>robust zero-shot performance</b>,
-    in order to assess their robust multimodal alignment.
-</blockquote>
+
+> <p align="justify"> <b> <span style="color: blue;">Left</span></b>:
+> We investigate the <b>multimodal alignment of robust encoders</b> by aligning
+> the feature space of robust encoders using a <b>linear layer</b> with the pre-trained CLIP model, which has a strong multimodal
+> feature representation. We then align robust encoders with CLIP’s text encoder to evaluate <b>robust zero-shot performance</b>,
+> in order to assess their robust multimodal alignment.
 
 
-<blockquote style="margin-left: 20px; border-left: 4px solid blue; padding-left: 10px;">
-    <b><span style="color: blue;">Right:</span></b> The results demonstrate a <b>strong correlation</b> between <b>model scale</b>,
-    <b>training strategy</b>, and <b>robustness preservation</b> during CLIP alignment. <i>Small-scale models</i> (e.g., ViT-B and
-    ResNet-101) suffer <b>significant robustness degradation</b> post-alignment, with accuracy dropping <i>below 60%</i> across
-    all datasets. In contrast, <b>large-scale models</b> (ViT-H and ViT-G) successfully <b>retain their robustness</b> while acquiring
-    <i>robust zero-shot capabilities</i>. Leveraging this insight, we integrate these robust encoders into the <b>LLaVA framework</b>,
-    achieving <b>strong adversarial robustness</b> and <b>semantic alignment</b> in MLLMs <i>without additional specialized adversarial training</i>.
-</blockquote>
+
+> <p align="justify"> <b> <span style="color: blue;">Right</span></b>:
+> The results demonstrate a <b>strong correlation</b> between <b>model scale</b>,
+> <b>training strategy</b>, and <b>robustness preservation</b> during CLIP alignment. <i>Small-scale models</i> (e.g., ViT-B and
+> ResNet-101) suffer <b>significant robustness degradation</b> post-alignment, with accuracy dropping <i>below 60%</i> across
+> all datasets.In contrast, <b>large-scale models</b> (ViT-H and ViT-G) successfully <b>retain their robustness</b> while acquiring
+> <i>robust zero-shot capabilities</i>. Leveraging this insight, we integrate these robust encoders into the <b>LLaVA framework</b>,
+> achieving  <b>strong adversarial robustness</b> and <b>semantic alignment</b> in MLLMs <i>without additional specialized adversarial training</i>.
 
 
 
