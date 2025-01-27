@@ -11,6 +11,7 @@ and [Salman Khan](https://salman-h-khan.github.io)
 
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2406.08486)
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://hashmatshadab.github.io/Robust-LLaVA/)
+[![Model Weights](https://img.shields.io/badge/Google%20Drive-Model%20Weights-blue?logo=google-drive)](https://drive.google.com/drive/folders/1mt5zbiWi_ZYNJyDCpJ33Zc3AFZ9NxaLr?usp=sharing)
 
 
 [//]: # ([![Video]&#40;https://img.shields.io/badge/Video-Presentation-F9D371&#41;]&#40;https://drive.google.com/file/d/1ZdUV83RvyL4mqCyxlqqD468VbRRAGdDY/view?usp=sharing&#41;)
@@ -34,14 +35,14 @@ and [Salman Khan](https://salman-h-khan.github.io)
     <img src="./assets/fig1.png" alt="Robust-LLaVA Diagram" width="600">
 
 <p align="justify">
-<b>Robust accuracy of Robust-LLaVA<sup>4</sup> on downstream vision-language tasks
+<b>Robust score of Robust-LLaVA<sup>4</sup> on downstream vision-language tasks
 with adversarial examples crafted at &epsilon; = 4/255:</b> The original CLIP integrated into LLaVA exhibits 
 <i>minimal robustness</i>. Our proposed <b>Robust-LLaVA<sup>4</sup></b> <b>outperforms</b> state-of-the-art 
 robust CLIP models, such as <span><b><a href="https://arxiv.org/abs/2402.12336" target="_blank"
 style="color: #007bff; text-decoration: underline;">FARE<sup>4</sup></a></b></span> 
 and <span><b><a href="https://arxiv.org/abs/2409.07353" target="_blank"
 style="color: #007bff; text-decoration: underline;">Sim-CLIP<sup>4</sup></a></b></span> 
-in <b>robust accuracy across all tasks and diverse datasets</b>, while <i>maintaining high clean accuracy</i>.
+in <b>robustness score across all tasks and diverse datasets</b>, while <i>maintaining high clean accuracy</i>. (Accuracy is reported for VQAv2 and TextVQA, while CIDER score is reported for Flickr30k and COCO).
 </p>
 </div>
 
@@ -86,10 +87,16 @@ creates a <b>semantic alignment gap</b>, impairing MLLMs' ability to perform <i>
 <i>rich robust representations</i>, can exhibit <b>strong semantic alignment</b> within the MLLM framework.
 </p>
 
+<div style="text-align: justify;">
+
 > <b><span style="color: blue;">Left:</span></b> We investigate the <b>multimodal alignment of robust encoders</b> by aligning
 > the feature space of robust encoders using a <b>linear layer</b> with the pre-trained CLIP model, which has a strong multimodal
 > feature representation. We then align robust encoders with CLIP’s text encoder to evaluate <b>robust zero-shot performance</b>,
 > in order to assess their robust multimodal alignment.
+
+</div>
+
+<div style="text-align: justify;">
 
 > <b><span style="color: blue;">Right:</span></b> The results demonstrate a <b>strong correlation</b> between <b>model scale</b>,
 > <b>training strategy</b>, and <b>robustness preservation</b> during CLIP alignment. <i>Small-scale models</i> (e.g., ViT-B and
@@ -97,6 +104,8 @@ creates a <b>semantic alignment gap</b>, impairing MLLMs' ability to perform <i>
 > all datasets.In contrast, <b>large-scale models</b> (ViT-H and ViT-G) successfully <b>retain their robustness</b> while acquiring
 > <i>robust zero-shot capabilities</i>. Leveraging this insight, we integrate these robust encoders into the <b>LLaVA framework</b>,
 > achieving  <b>strong adversarial robustness</b> and <b>semantic alignment</b> in MLLMs <i>without additional specialized adversarial training</i>.
+
+</div>
 
 
 </div>
