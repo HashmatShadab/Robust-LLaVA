@@ -90,7 +90,7 @@ creates a <b>semantic alignment gap</b>, impairing MLLMs' ability to perform <i>
 </div>
 
 
-<blockquote style="text-align: justify; margin-left: 20px; border-left: 4px solid blue; padding-left: 10px;">
+<blockquote style="margin-left: 20px; border-left: 4px solid blue; padding-left: 10px;">
     <b><span style="color: blue;">Left:</span></b> We investigate the <b>multimodal alignment of robust encoders</b> by aligning
     the feature space of robust encoders using a <b>linear layer</b> with the pre-trained CLIP model, which has a strong multimodal
     feature representation. We then align robust encoders with CLIP’s text encoder to evaluate <b>robust zero-shot performance</b>,
@@ -98,7 +98,7 @@ creates a <b>semantic alignment gap</b>, impairing MLLMs' ability to perform <i>
 </blockquote>
 
 
-<blockquote style="text-align: justify; margin-left: 20px; border-left: 4px solid blue; padding-left: 10px;">
+<blockquote style="margin-left: 20px; border-left: 4px solid blue; padding-left: 10px;">
     <b><span style="color: blue;">Right:</span></b> The results demonstrate a <b>strong correlation</b> between <b>model scale</b>,
     <b>training strategy</b>, and <b>robustness preservation</b> during CLIP alignment. <i>Small-scale models</i> (e.g., ViT-B and
     ResNet-101) suffer <b>significant robustness degradation</b> post-alignment, with accuracy dropping <i>below 60%</i> across
