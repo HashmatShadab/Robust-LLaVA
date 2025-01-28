@@ -111,7 +111,6 @@ creates a <b>semantic alignment gap</b>, impairing MLLMs' ability to perform <i>
 ---
 
 
-<a name="Installation"/>
 
 ##  Installation 💿
 
@@ -145,7 +144,6 @@ pip install torchattacks
 ---
 
 
-<a name="Available-Models"/>
 
 ## Model Zoo 🧠
 
