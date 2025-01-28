@@ -376,7 +376,6 @@ provide an unrefined version upon request, along with the necessary guidance for
 
 
 
-<a name="bibtex"/>
 
 ##  BibTeX 📜
 
@@ -387,7 +386,6 @@ provide an unrefined version upon request, along with the necessary guidance for
 <hr />
 
 
-<a name="contact"/>
 
 ##  Contact 📧
 
@@ -395,7 +393,6 @@ Should you have any question, please create an issue on this repository or conta
 
 <hr />
 
-<a name="references"/>
 
 ## References 📖
 
