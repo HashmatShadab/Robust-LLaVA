@@ -65,7 +65,7 @@ in the original [LLaVA](https://github.com/haotian-liu/LLaVA) codebase, but for 
 ## Evaluation
 
 ---
-First download the instruction tuned model checkpoints from Model Zoo as mentioned in the [README](../README.md). In the below scripts, following variables should be set:
+First download the instruction tuned (Stage 2) model checkpoints from Model Zoo as mentioned in the [README](../README.md). In the below scripts, following variables should be set:
 
 - **`$DATA_ROOT`**: Path to the root directory of the evaluation data.
 - **`$MODEL_PATH`**: Path to the model checkpoint.
@@ -73,10 +73,11 @@ First download the instruction tuned model checkpoints from Model Zoo as mention
 - **`$EPSILON`**: Perturbation budget for adversarial evaluation.
   - For example, to evaluate on a perturbation budget of **2/255**, set `$EPSILON=2`.
 - **`$ENCODER`**:
-  - Will be changed when using the **adversarially finetuned CLIP model from [SimCLIP](https://arxiv.org/abs/2407.14971)**, replacing the original CLIP model in the LLaVA framework.
-  - Will be changed when using the **adversarially finetuned CLIP model from [FARE](https://arxiv.org/abs/2402.12336)**, replacing the original CLIP model in the LLaVA framework.
+  - Will be changed when using the **adversarially finetuned CLIP model from [SimCLIP](https://arxiv.org/abs/2407.14971)**, replacing the original CLIP vision encoder in the LLaVA framework. ($MODEL_PATH will be of CLIP)
+  - Will be changed when using the **adversarially finetuned CLIP model from [FARE](https://arxiv.org/abs/2402.12336)**, replacing the original CLIP vision encoder in the LLaVA framework. ($MODEL_PATH will be of CLIP)
   - Set to `'none'` for all other cases.
 
+<div align="center">
 
 | **LLaVA Model**                                                                  | **$Encoder** |
 |----------------------------------------------------------------------------------|:------------:|
@@ -93,6 +94,8 @@ First download the instruction tuned model checkpoints from Model Zoo as mention
 | **Robust-LLaVA<sup>4</sup><sub>H</sub> + Robust-LLaVA<sup>4</sup><sub>G</sub>**  |     none     |
 | **ViT-B/16** (Adversarially trained on ImageNet-1k)                              |     none     | 
 | **ViT-L/14** (Naturally trained on ImageNet-21k + ImageNet-1k)                   |     none     | 
+
+</div>
 
 
 ---
