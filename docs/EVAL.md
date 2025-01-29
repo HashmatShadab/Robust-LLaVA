@@ -82,7 +82,6 @@ First download the instruction tuned (Stage 2) model checkpoints from Model Zoo 
 | **LLaVA Model**                                                                  | **$Encoder** |
 |----------------------------------------------------------------------------------|:------------:|
 | **CLIP**                                                                         |     none     |
-| **CLIP@224**                                                                     |   clip224    |
 | **FARE4@224**                                                                    |    fare4     |
 | **FARE4@336**                                                                    |  fare4_336   |
 | **Robust-LLaVA<sup>4</sup><sub>H</sub>**                                         |     none     | 
