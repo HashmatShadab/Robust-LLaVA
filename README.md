@@ -25,7 +25,7 @@ and [Salman Khan](https://salman-h-khan.github.io)
 
 # :fire: Updates
 
-* **(Jan 26, 2025)**
+* **(Feb 03, 2025)**
     * Adversarial evaluation codes are released.
     * Robust-LLaVA-H and Robust-LLaVA-G released: Excited to release the new integration of LLaVA with large-scale
       robust image encoders, ViT-H and ViT-G, respectively. :fire::fire:
