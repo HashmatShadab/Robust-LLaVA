@@ -9,7 +9,7 @@ and [Salman Khan](https://salman-h-khan.github.io)
 
 #### **Mohamed bin Zayed University of AI (MBZUAI)**
 
-[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)]()
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2502.01576)
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://hashmatshadab.github.io/Robust-LLaVA/)
 [![Model Weights](https://img.shields.io/badge/Google%20Drive-Model%20Weights-blue?logo=google-drive)](https://drive.google.com/drive/folders/1mt5zbiWi_ZYNJyDCpJ33Zc3AFZ9NxaLr?usp=sharing)
 
