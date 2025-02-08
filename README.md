@@ -380,16 +380,12 @@ provide an unrefined version upon request, along with the necessary guidance for
 ##  BibTeX 📜
 
 ```bibtex
-@misc{malik2025robustllavaeffectivenesslargescalerobust,
-      title={Robust-LLaVA: On the Effectiveness of Large-Scale Robust Image Encoders for Multi-modal Large Language Models}, 
-      author={Hashmat Shadab Malik and Fahad Shamshad and Muzammal Naseer and Karthik Nandakumar and Fahad Khan and Salman Khan},
-      year={2025},
-      eprint={2502.01576},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2502.01576}, 
+@article{malik2025robust,
+  title={Robust-LLaVA: On the Effectiveness of Large-Scale Robust Image Encoders for Multi-modal Large Language Models},
+  author={Malik, Hashmat Shadab and Shamshad, Fahad and Naseer, Muzammal and Nandakumar, Karthik and Khan, Fahad and Khan, Salman},
+  journal={arXiv preprint arXiv:2502.01576},
+  year={2025}
 }
-
 ```
 
 <hr />
