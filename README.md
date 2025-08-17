@@ -24,7 +24,8 @@ and [Salman Khan](https://salman-h-khan.github.io)
 <hr />
 
 # :fire: Updates
-
+* **(August 17, 2025)**
+  * Paper accepted in [Trustworthy FMs Workshop at ICCV 2025](https://t2fm-ws.github.io/T2FM-ICCV25/).
 * **(Feb 03, 2025)**
     * Adversarial evaluation codes are released.
     * Robust-LLaVA-H and Robust-LLaVA-G released: Excited to release the new integration of LLaVA with large-scale
