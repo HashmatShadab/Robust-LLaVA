@@ -1,4 +1,4 @@
-# **Robust-LLaVA: On the Effectiveness of Large-Scale Robust Image Encoders for Multi-modal Large Language Models**
+# **Robust-LLaVA: On the Effectiveness of Large-Scale Robust Image Encoders for Multi-modal Large Language Models [ICCVW 2025 (Oral)]**
 
 [Hashmat Shadab Malik](https://github.com/HashmatShadab),
 [ Fahad Shamshad](https://scholar.google.com.pk/citations?user=d7QL4wkAAAAJ&hl=en),
