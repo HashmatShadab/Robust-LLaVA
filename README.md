@@ -11,6 +11,7 @@ and [Salman Khan](https://salman-h-khan.github.io)
 
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2502.01576)
 [![slides](https://img.shields.io/badge/Poster-PDF-87CEEB)](https://drive.google.com/file/d/1DWWyvygA4ns6ZKO-3Sbn67H5sxa86DiW/view?usp=sharing)
+[![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://drive.google.com/file/d/1SSDnhsF1VnjnRgadnNBVLWRyLcuY6uZl/view?usp=sharing)
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://hashmatshadab.github.io/Robust-LLaVA/)
 [![Model Weights](https://img.shields.io/badge/Google%20Drive-Model%20Weights-blue?logo=google-drive)](https://drive.google.com/drive/folders/1mt5zbiWi_ZYNJyDCpJ33Zc3AFZ9NxaLr?usp=sharing)
 
