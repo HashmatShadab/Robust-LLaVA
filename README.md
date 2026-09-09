@@ -393,6 +393,16 @@ provide an unrefined version upon request, along with the necessary guidance for
 }
 ```
 
+### Extended Version
+
+```bibtex
+@article{malik2026investigating,
+  title={Investigating Adversarial Robustness of Multi-modal Large Language Models},
+  author={Malik, Hashmat Shadab and Naseer, Muzammal and Khan, Salman},
+  journal={arXiv preprint arXiv:2606.03713},
+  year={2026}
+}
+```
 <hr />
 
 
